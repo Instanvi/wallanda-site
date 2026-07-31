@@ -14,11 +14,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/wallanda-logo.svg"
+            src="/wollanda.svg"
             alt="Wallanda Global Logo"
-            width={160}
+            width={50}
             height={44}
-            className="h-9 w-auto"
+            className="h-20 w-auto"
             priority
           />
         </Link>

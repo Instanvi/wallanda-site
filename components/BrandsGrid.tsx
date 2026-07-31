@@ -32,7 +32,7 @@ export default function BrandsGrid() {
       link: "/brands#kassongo",
       icon: <Smartphone className="h-7 w-7" />,
       logo: "/kassongo.svg",
-      accent: "border-t-4 border-accent",
+      accent: "border-t-4 border-green-900",
     },
     {
       name: "Kovasure",
@@ -41,7 +41,7 @@ export default function BrandsGrid() {
       link: "/brands#kovasure",
       icon: <Umbrella className="h-7 w-7" />,
       logo: "/kovasure.svg",
-      accent: "border-t-4 border-primary",
+      accent: "border-t-4 border-orange-500",
     },
   ];
 

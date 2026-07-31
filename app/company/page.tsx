@@ -52,20 +52,14 @@ export default function CompanyPage() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative bg-[#001D47] text-white overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-accent/10 blur-3xl translate-x-1/3 -translate-y-1/3" />
-            <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-3xl -translate-x-1/3 translate-y-1/3" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02),transparent_60%)]" />
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 py-20 md:py-28">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+        {/* Page Header */}
+        <section className="bg-white border-b border-gray-100">
+          <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
+            <div className="max-w-3xl">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
                 One ecosystem. Endless connections.
               </h1>
-              <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                 Wallanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure.
               </p>
             </div>

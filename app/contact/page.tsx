@@ -94,9 +94,6 @@ export default function ContactPage() {
         {/* Simple & Elegant Hero Section */}
         <section className="bg-white border-b border-gray-200 py-16 md:py-24 px-6 md:px-8">
           <div className="max-w-7xl mx-auto">
-            <span className="text-xs font-extrabold tracking-wider text-accent uppercase block mb-3">
-              Get in Touch
-            </span>
             <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-primary mb-4 leading-tight">
               Connect with our global offices.
             </h1>
@@ -327,56 +324,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-          </div>
-        </section>
-
-        {/* Global Offices */}
-        <section className="py-24 bg-white border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-xs font-extrabold tracking-wider text-accent uppercase mb-3 block">
-                Corporate Hubs
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
-                Our Physical Presence
-              </h2>
-              <p className="text-gray-500 text-sm">
-                Managing international transport corridors through our regional hub network.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {offices.map((office, idx) => (
-                <div
-                  key={idx}
-                  className="bg-slate-50 border border-gray-150 p-8 rounded-3xl hover:shadow-soft transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center gap-2 text-primary font-display font-bold text-lg mb-1">
-                      <MapPin className="w-4 h-4 text-accent" />
-                      {office.city}, {office.country}
-                    </div>
-                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-4">{office.role}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed mb-6">{office.address}</p>
-                  </div>
-                  
-                  <div className="space-y-2 pt-6 border-t border-gray-250/60 text-xs text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-gray-400" />
-                      <span>{office.phone}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-gray-400" />
-                      <span>{office.email}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-gray-400" />
-                      <span>{office.hours}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
       </main>
