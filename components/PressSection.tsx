@@ -26,7 +26,7 @@ export default async function PressSection() {
           title: fields.title || "",
           excerpt: fields.excerpt || "",
           date: fields.date ? fields.date.split("T")[0] : "",
-          source: fields.source || "Wallanda Newsroom",
+          source: fields.source || "wollanda Newsroom",
           link: `/press/${fields.slug}`,
           thumbnail: fields.coverImage?.fields?.file?.url 
             ? `https:${fields.coverImage.fields.file.url}` 

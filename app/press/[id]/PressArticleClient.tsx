@@ -42,9 +42,9 @@ export default function PressArticleClient({ slug, initialPost, allPosts = [] }:
   let tags: string[] = [];
   let content: any = null;
   let related: any[] = [];
-  let author = "Wallanda Global Communications";
+  let author = "wollanda Global Communications";
   let authorBio = "";
-  let source = "Wallanda Newsroom";
+  let source = "wollanda Newsroom";
 
   if (isContentful) {
     const fields = initialPost.fields;
@@ -59,7 +59,7 @@ export default function PressArticleClient({ slug, initialPost, allPosts = [] }:
     imageAlt = fields.title || "";
     tags = fields.tags || [];
     content = fields.content; // Rich text document
-    source = fields.source || "Wallanda Newsroom";
+    source = fields.source || "wollanda Newsroom";
     
     // Filter and map dynamic related releases from Contentful
     related = allPosts
@@ -77,7 +77,7 @@ export default function PressArticleClient({ slug, initialPost, allPosts = [] }:
           thumbnail: f.coverImage?.fields?.file?.url 
             ? `https:${f.coverImage.fields.file.url}` 
             : "/ship.jpeg",
-          source: f.source || "Wallanda Newsroom",
+          source: f.source || "wollanda Newsroom",
           tags: f.tags || [],
         };
       });
@@ -418,7 +418,7 @@ export default function PressArticleClient({ slug, initialPost, allPosts = [] }:
                   <h4 className="font-display font-bold text-primary mb-3 text-sm uppercase tracking-wider">PR Contact</h4>
                   <p className="text-xs text-gray-600 font-bold mb-1">{author}</p>
                   {authorBio && <p className="text-xs text-gray-500 leading-relaxed mb-3">{authorBio}</p>}
-                  <p className="text-xs text-accent font-semibold">press@wallanda.com</p>
+                  <p className="text-xs text-accent font-semibold">press@wollanda.com</p>
                 </div>
               </div>
             </div>

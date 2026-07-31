@@ -77,7 +77,7 @@ export default function CareersPage() {
       department: "Marketing",
       location: "London, UK / Hybrid",
       type: "Full-Time",
-      description: "Craft and execute the communication strategy for Wallanda Global, coordinating PR campaigns across all three core brands.",
+      description: "Craft and execute the communication strategy for wollanda Global, coordinating PR campaigns across all three core brands.",
     },
   ];
 
@@ -201,7 +201,7 @@ export default function CareersPage() {
                     </div>
                     <div className="flex-shrink-0">
                       <Button
-                        href={`mailto:careers@wallanda.com?subject=Application for ${encodeURIComponent(job.title)}`}
+                        href={`mailto:careers@wollanda.com?subject=Application for ${encodeURIComponent(job.title)}`}
                         variant="outline"
                         size="sm"
                         className="w-full md:w-auto"

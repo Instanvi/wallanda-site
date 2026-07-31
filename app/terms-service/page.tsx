@@ -29,7 +29,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">1. Acceptance of Terms</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    These Terms of Use (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and Wallanda Global, Inc. and its family of brands Ntigi, Kassongo, and Kovasure (collectively, &ldquo;Wallanda,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your access to and use of our websites, mobile applications, APIs, and related services (collectively, the &ldquo;Services&rdquo;).
+                                    These Terms of Use (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and wollanda Global, Inc. and its family of brands Ntigi, Kassongo, and Kovasure (collectively, &ldquo;wollanda,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governing your access to and use of our websites, mobile applications, APIs, and related services (collectively, the &ldquo;Services&rdquo;).
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     By accessing, browsing, or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not access or use our Services. If you are using the Services on behalf of a business or other legal entity, you represent that you have the authority to bind that entity to these Terms.
@@ -42,14 +42,14 @@ export default function TermsOfUsePage() {
                                     You must be at least 18 years old and capable of forming a binding contract to use our Services. By registering for an account, you represent and warrant that all information you provide is accurate, current, and complete, and that you will promptly update any changes to such information.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. Wallanda will not be liable for any loss or damage arising from your failure to comply with these obligations.
+                                    You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. wollanda will not be liable for any loss or damage arising from your failure to comply with these obligations.
                                 </p>
                             </section>
 
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">3. Description of Services</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    Wallanda provides a global platform for logistics, shipping, cargo insurance, and financial services through our family of brands. Our Services include, but are not limited to:
+                                    wollanda provides a global platform for logistics, shipping, cargo insurance, and financial services through our family of brands. Our Services include, but are not limited to:
                                 </p>
                                 <div className="rounded-lg mb-4">
                                     <ul className="space-y-2 text-gray-700 text-sm p-5">
@@ -93,7 +93,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">5. Shipments, Insurance, and Payments</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    <strong>Shipments.</strong> When you book a shipment through our Services, you authorize Wallanda and our carrier partners to transport your goods in accordance with the selected service level. You are responsible for proper packaging, accurate labeling, and complete customs documentation. Delivery times are estimates and not guaranteed unless expressly agreed in writing.
+                                    <strong>Shipments.</strong> When you book a shipment through our Services, you authorize wollanda and our carrier partners to transport your goods in accordance with the selected service level. You are responsible for proper packaging, accurate labeling, and complete customs documentation. Delivery times are estimates and not guaranteed unless expressly agreed in writing.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     <strong>Insurance.</strong> Insurance coverage purchased through Kovasure is governed by the specific policy terms, conditions, and exclusions issued at the time of purchase. Coverage is not automatic; you must declare the full value of your goods and pay the applicable premium. Claims must be filed within the timeframes and in the manner specified in your policy documents.
@@ -106,7 +106,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">6. Intellectual Property Rights</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    All content, software, trademarks, logos, designs, and materials available through the Services are the property of Wallanda or our licensors and are protected by copyright, trademark, patent, and other intellectual property laws. Nothing in these Terms grants you any right, title, or interest in or to our intellectual property.
+                                    All content, software, trademarks, logos, designs, and materials available through the Services are the property of wollanda or our licensors and are protected by copyright, trademark, patent, and other intellectual property laws. Nothing in these Terms grants you any right, title, or interest in or to our intellectual property.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Services for their intended purpose. You may not copy, modify, distribute, sell, or lease any part of the Services without our prior written consent.
@@ -116,7 +116,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">7. Confidentiality and Data Protection</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    You may receive access to confidential or proprietary information of Wallanda or other users through the Services. You agree to hold such information in strict confidence and not disclose it to any third party except as required by law or with our express written permission.
+                                    You may receive access to confidential or proprietary information of wollanda or other users through the Services. You agree to hold such information in strict confidence and not disclose it to any third party except as required by law or with our express written permission.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     Our collection and use of personal data is governed by our <Link href="/privacy" className="text-accent font-medium hover:underline">Privacy Policy</Link>. By using the Services, you consent to our data practices as described therein.
@@ -126,7 +126,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">8. Disclaimers</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    THE SERVICES ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WALLANDA DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+                                    THE SERVICES ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, wollanda DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     We do not warrant that the Services will be uninterrupted, error-free, secure, or free of viruses or other harmful components. We do not guarantee the accuracy, completeness, or timeliness of information provided by carriers, insurers, or other third parties. You acknowledge that shipping, insurance, and international trade involve inherent risks, and you assume full responsibility for your decisions and actions.
@@ -136,10 +136,10 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">9. Limitation of Liability</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WALLANDA, OUR DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE SERVICES.
+                                    TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL wollanda, OUR DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE SERVICES.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    Our total aggregate liability for any claims arising under these Terms shall not exceed the greater of (a) the amount you paid to Wallanda for the specific transaction giving rise to the claim during the twelve (12) months preceding the claim, or (b) one hundred U.S. dollars (USD $100). The limitations of liability set forth herein apply regardless of the form of action, whether in contract, tort (including negligence), strict liability, or otherwise, and even if we have been advised of the possibility of such damages.
+                                    Our total aggregate liability for any claims arising under these Terms shall not exceed the greater of (a) the amount you paid to wollanda for the specific transaction giving rise to the claim during the twelve (12) months preceding the claim, or (b) one hundred U.S. dollars (USD $100). The limitations of liability set forth herein apply regardless of the form of action, whether in contract, tort (including negligence), strict liability, or otherwise, and even if we have been advised of the possibility of such damages.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitations may not apply to you. In such cases, our liability shall be limited to the maximum extent permitted by law.
@@ -149,7 +149,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">10. Indemnification</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    You agree to defend, indemnify, and hold harmless Wallanda and our officers, directors, employees, agents, licensors, and suppliers from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys&rsquo; fees) arising out of or in any way connected with:
+                                    You agree to defend, indemnify, and hold harmless wollanda and our officers, directors, employees, agents, licensors, and suppliers from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys&rsquo; fees) arising out of or in any way connected with:
                                 </p>
                                 <div className="rounded-lg mb-4">
                                     <ul className="space-y-2 text-gray-700 text-sm p-5">
@@ -165,7 +165,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">11. Third-Party Services and Links</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    The Services may contain links to third-party websites, services, or resources that are not owned or controlled by Wallanda. We do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party services. You acknowledge and agree that Wallanda shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with your use of or reliance on any such content, goods, or services available on or through any such third-party services.
+                                    The Services may contain links to third-party websites, services, or resources that are not owned or controlled by wollanda. We do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party services. You acknowledge and agree that wollanda shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with your use of or reliance on any such content, goods, or services available on or through any such third-party services.
                                 </p>
                             </section>
 
@@ -185,7 +185,7 @@ export default function TermsOfUsePage() {
                                     These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms or the Services shall first be attempted to be resolved through good-faith negotiation.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    If negotiation fails, you and Wallanda agree to resolve any dispute through binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The arbitration shall take place in Wilmington, Delaware, and shall be conducted in English. The arbitrator&rsquo;s decision shall be final and binding, and judgment on the award may be entered in any court of competent jurisdiction.
+                                    If negotiation fails, you and wollanda agree to resolve any dispute through binding arbitration administered by the American Arbitration Association (AAA) in accordance with its Commercial Arbitration Rules. The arbitration shall take place in Wilmington, Delaware, and shall be conducted in English. The arbitrator&rsquo;s decision shall be final and binding, and judgment on the award may be entered in any court of competent jurisdiction.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mb-4">
                                     Notwithstanding the foregoing, either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent irreparable harm pending the completion of arbitration. You agree that any claims must be brought in your individual capacity and not as a plaintiff or class member in any purported class or representative proceeding.
@@ -195,7 +195,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">14. International Use</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    Wallanda operates globally, but our Services are controlled and operated from facilities in the United States. We make no representations that the Services are appropriate or available for use in all locations. If you access the Services from a jurisdiction where the content or practices are illegal or prohibited, you do so at your own risk and are responsible for compliance with local laws.
+                                    wollanda operates globally, but our Services are controlled and operated from facilities in the United States. We make no representations that the Services are appropriate or available for use in all locations. If you access the Services from a jurisdiction where the content or practices are illegal or prohibited, you do so at your own risk and are responsible for compliance with local laws.
                                 </p>
                             </section>
 
@@ -219,7 +219,7 @@ export default function TermsOfUsePage() {
                             <section>
                                 <h2 className="text-2xl font-bold text-primary mb-4">17. Entire Agreement</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    These Terms, together with our Privacy Policy and any other legal notices or agreements published by us on the Services, constitute the entire agreement between you and Wallanda concerning the Services and supersede all prior or contemporaneous agreements, proposals, or representations, whether oral or written.
+                                    These Terms, together with our Privacy Policy and any other legal notices or agreements published by us on the Services, constitute the entire agreement between you and wollanda concerning the Services and supersede all prior or contemporaneous agreements, proposals, or representations, whether oral or written.
                                 </p>
                             </section>
 
@@ -249,7 +249,7 @@ export default function TermsOfUsePage() {
                                     </div>
                                 </div>
                                 <p className="text-primary text-sm mt-4">
-                                    For general inquiries, you may also write to us at: Wallanda Global, Douala, Cameroon.
+                                    For general inquiries, you may also write to us at: wollanda Global, Douala, Cameroon.
                                 </p>
                             </section>
 

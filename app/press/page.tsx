@@ -22,7 +22,7 @@ export default async function PressListingPage() {
           thumbnail: fields.coverImage?.fields?.file?.url 
             ? `https:${fields.coverImage.fields.file.url}` 
             : "/ship.jpeg",
-          source: fields.source || "Wallanda Newsroom",
+          source: fields.source || "wollanda Newsroom",
           tags: (Array.isArray(fields.tags) 
             ? fields.tags 
             : (typeof fields.tags === "string" ? [fields.tags] : []))

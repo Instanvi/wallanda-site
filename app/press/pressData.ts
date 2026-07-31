@@ -36,21 +36,21 @@ export interface PressPostSummary {
 export const pressArticles: Record<string, PressArticle> = {
   "merger-announcement": {
     slug: "merger-announcement",
-    title: "Potta Finance and Wallanda Complete Merger, Creating Leading Logistics Provider Wallanda Global",
+    title: "Potta Finance and wollanda Complete Merger, Creating Leading Logistics Provider wollanda Global",
     excerpt: "The combining of these two industry leaders creates a unified global powerhouse with unmatched software capability and carrier partnerships.",
     category: "Corporate",
     date: "2026-07-28",
     readTime: "5 min",
     source: "PR Newswire",
-    author: "Wallanda Global PR",
-    authorBio: "Official communications department of Wallanda Global.",
+    author: "wollanda Global PR",
+    authorBio: "Official communications department of wollanda Global.",
     image: "/ship.jpeg",
-    imageAlt: "Logistics vessel representing the global scale of Wallanda Global",
+    imageAlt: "Logistics vessel representing the global scale of wollanda Global",
     tags: ["Merger", "Fintech", "Logistics", "Corporate"],
     content: [
       {
         type: "p",
-        content: "We are thrilled to announce the official merger of Potta Finance and Wallanda, bringing together two category leaders in financial technology and logistics orchestration under a single unified brand: Wallanda Global. By combining Potta Finance's robust financial platform with Wallanda's intelligent multi-carrier routing systems, we are introducing a modern global freight management platform tailored for the digital-first economy."
+        content: "We are thrilled to announce the official merger of Potta Finance and wollanda, bringing together two category leaders in financial technology and logistics orchestration under a single unified brand: wollanda Global. By combining Potta Finance's robust financial platform with wollanda's intelligent multi-carrier routing systems, we are introducing a modern global freight management platform tailored for the digital-first economy."
       },
       {
         type: "h2",
@@ -58,11 +58,11 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "Historically, logistics orchestration and cargo financing have lived in isolated silos, causing delays, reconciliation bottlenecks, and capital inefficiencies for merchants worldwide. Wallanda Global directly addresses this integration gap. Our combined suite brings together Ntigi Shipping Tech, Kassongo Shipping App, and Kovasure Cargo Insurance, offering custom APIs and apps that embed finance and freight capabilities into a single checkout flow."
+        content: "Historically, logistics orchestration and cargo financing have lived in isolated silos, causing delays, reconciliation bottlenecks, and capital inefficiencies for merchants worldwide. wollanda Global directly addresses this integration gap. Our combined suite brings together Ntigi Shipping Tech, Kassongo Shipping App, and Kovasure Cargo Insurance, offering custom APIs and apps that embed finance and freight capabilities into a single checkout flow."
       },
       {
         type: "tip",
-        content: "Under the new entity, existing clients of both Potta Finance and Wallanda will gain instant access to integrated cargo insurance and priority carrier dispatch routing at no additional monthly subscription cost."
+        content: "Under the new entity, existing clients of both Potta Finance and wollanda will gain instant access to integrated cargo insurance and priority carrier dispatch routing at no additional monthly subscription cost."
       },
       {
         type: "h2",
@@ -84,32 +84,32 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "\"The merger between Potta Finance and Wallanda marks a major turning point in how global supply chains operate. We are building the infrastructure that will allow any enterprise to operate borders-free, resolving both the movement of physical goods and the digital payments backing them in real-time.\" — Genesis St. James Amahnui, CEO of Wallanda Global."
+        content: "\"The merger between Potta Finance and wollanda marks a major turning point in how global supply chains operate. We are building the infrastructure that will allow any enterprise to operate borders-free, resolving both the movement of physical goods and the digital payments backing them in real-time.\" — Genesis St. James Amahnui, CEO of wollanda Global."
       },
       {
         type: "cta",
-        content: "Discover how Wallanda Global can help optimize your supply chain. Explore our product offerings today."
+        content: "Discover how wollanda Global can help optimize your supply chain. Explore our product offerings today."
       }
     ],
     relatedSlugs: ["pros-to-know", "strategic-investment"]
   },
   "pros-to-know": {
     slug: "pros-to-know",
-    title: "Three Wallanda Global Leaders Named Recipients of 2026 Pros to Know Award for Supply Chain Innovation",
+    title: "Three wollanda Global Leaders Named Recipients of 2026 Pros to Know Award for Supply Chain Innovation",
     excerpt: "Annual award program recognizes supply chain professionals who have demonstrated exceptional leadership and strategic foresight.",
     category: "Awards",
     date: "2026-06-15",
     readTime: "4 min",
     source: "Supply Chain Digest",
     author: "Corporate Communications",
-    authorBio: "Official communications department of Wallanda Global.",
+    authorBio: "Official communications department of wollanda Global.",
     image: "/boss.jpeg",
     imageAlt: "Genesis St. James Amahnui named supply chain pro to know",
     tags: ["Leadership", "Innovation", "Awards"],
     content: [
       {
         type: "p",
-        content: "We are proud to share that Supply Chain Digest has named three executives from Wallanda Global as recipients of the prestigious 2026 Pros to Know Award. The award honors outstanding supply chain leaders who are driving efficiency and building resilience in global trade."
+        content: "We are proud to share that Supply Chain Digest has named three executives from wollanda Global as recipients of the prestigious 2026 Pros to Know Award. The award honors outstanding supply chain leaders who are driving efficiency and building resilience in global trade."
       },
       {
         type: "h2",
@@ -134,7 +134,7 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "This recognition highlights our company's dedication to solving modern trade complexities. By developing technology that cuts administrative friction and automates compliance checks, Wallanda Global continues to stand at the forefront of digital freight transformation."
+        content: "This recognition highlights our company's dedication to solving modern trade complexities. By developing technology that cuts administrative friction and automates compliance checks, wollanda Global continues to stand at the forefront of digital freight transformation."
       },
       {
         type: "cta",
@@ -145,21 +145,21 @@ export const pressArticles: Record<string, PressArticle> = {
   },
   "strategic-investment": {
     slug: "strategic-investment",
-    title: "Wallanda Global Receives Strategic Investment to Expand Unified Logistics and Fintech Solutions",
+    title: "wollanda Global Receives Strategic Investment to Expand Unified Logistics and Fintech Solutions",
     excerpt: "New investment round will accelerate product integration, core platform scalability, and enhance international delivery offerings.",
     category: "Funding",
     date: "2026-05-20",
     readTime: "6 min",
     source: "Financial Times",
     author: "Fintech Relations",
-    authorBio: "Official communications department of Wallanda Global.",
+    authorBio: "Official communications department of wollanda Global.",
     image: "/about-hero.webp",
-    imageAlt: "Wallanda Global global shipping network graphic illustration",
+    imageAlt: "wollanda Global global shipping network graphic illustration",
     tags: ["Investment", "Scale", "Fintech", "Funding"],
     content: [
       {
         type: "p",
-        content: "Wallanda Global has closed a significant strategic investment round led by major venture firms specializing in enterprise logistics, cross-border payments, and supply chain technology. The fresh capital injection will be deployed to accelerate product consolidation across our core brands, expand international routing pipelines, and grow our engineering presence in global trade centers."
+        content: "wollanda Global has closed a significant strategic investment round led by major venture firms specializing in enterprise logistics, cross-border payments, and supply chain technology. The fresh capital injection will be deployed to accelerate product consolidation across our core brands, expand international routing pipelines, and grow our engineering presence in global trade centers."
       },
       {
         type: "h2",
@@ -167,7 +167,7 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "With this investment, Wallanda Global will build deeper integrations between Ntigi Shipping Tech and Kassongo Shipping App, providing small and large merchants with automated Customs Declaration generation and instantaneous shipment tracking. Additionally, Kovasure Cargo Insurance will expand its risk underwriting algorithms to cover temperature-sensitive goods and high-value industrial machinery across transatlantic corridors."
+        content: "With this investment, wollanda Global will build deeper integrations between Ntigi Shipping Tech and Kassongo Shipping App, providing small and large merchants with automated Customs Declaration generation and instantaneous shipment tracking. Additionally, Kovasure Cargo Insurance will expand its risk underwriting algorithms to cover temperature-sensitive goods and high-value industrial machinery across transatlantic corridors."
       },
       {
         type: "h2",
@@ -175,7 +175,7 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "A large portion of the capital will fund research and development in real-time predictive ETA analytics. By utilizing machine learning algorithms to process historical carrier transit logs, port congestion reports, and weather patterns, Wallanda Global will offer merchants a highly accurate, dynamic arrival window for ocean and air cargo shipments."
+        content: "A large portion of the capital will fund research and development in real-time predictive ETA analytics. By utilizing machine learning algorithms to process historical carrier transit logs, port congestion reports, and weather patterns, wollanda Global will offer merchants a highly accurate, dynamic arrival window for ocean and air cargo shipments."
       },
       {
         type: "tip",
@@ -183,7 +183,7 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "cta",
-        content: "Get in touch with our team to learn how Wallanda's technology can future-proof your logistics enterprise."
+        content: "Get in touch with our team to learn how wollanda's technology can future-proof your logistics enterprise."
       }
     ],
     relatedSlugs: ["merger-announcement", "pros-to-know"]

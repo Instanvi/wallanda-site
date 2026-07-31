@@ -190,7 +190,7 @@ export default function BrandsPage() {
                     <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
                         <div className="max-w-3xl">
                             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
-                                Deliver confidence with Wallanda
+                                Deliver confidence with wollanda
                             </h1>
                             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                                 Our family of specialized brands gives you the technology, coverage, and connectivity to scale across borders with complete confidence.

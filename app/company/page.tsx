@@ -29,21 +29,21 @@ export default function CompanyPage() {
       country: "Cameroon",
       role: "Global Headquarters & Engineering Hub",
       address: "4 Étage, Bonaberi, Douala",
-      email: "douala@wallanda.com",
+      email: "douala@wollanda.com",
     },
     {
       city: "London",
       country: "United Kingdom",
       role: "European Operations & FinTech Desk",
       address: "30 St Mary Axe (The Gherkin), London",
-      email: "london@wallanda.com",
+      email: "london@wollanda.com",
     },
     {
       city: "New York",
       country: "United States",
       role: "North American Logistics & Carrier Partnerships",
       address: "1 World Trade Center, New York, NY",
-      email: "nyc@wallanda.com",
+      email: "nyc@wollanda.com",
     },
   ];
 
@@ -60,7 +60,7 @@ export default function CompanyPage() {
                 One ecosystem. Endless connections.
               </h1>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Wallanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure.
+                wollanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function CompanyPage() {
                   Powering global trade through digital innovation
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-base">
-                  Founded to address the friction points of international shipping and logistics financing, Wallanda Global represents a strategic evolution in the freight sector. By bringing together advanced API integrations, consumer apps, and cargo security protocols, we offer a complete tech stack for modern commerce.
+                  Founded to address the friction points of international shipping and logistics financing, wollanda Global represents a strategic evolution in the freight sector. By bringing together advanced API integrations, consumer apps, and cargo security protocols, we offer a complete tech stack for modern commerce.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                   <div className="flex gap-3">

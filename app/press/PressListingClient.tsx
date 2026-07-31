@@ -67,7 +67,7 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                 News, updates, and trade insights
               </h1>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Stay connected with the latest corporate mergers, strategic investments, product rollouts, and executive awards at Wallanda Global.
+                Stay connected with the latest corporate mergers, strategic investments, product rollouts, and executive awards at wollanda Global.
               </p>
             </div>
           </div>

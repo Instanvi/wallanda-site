@@ -50,7 +50,7 @@ export default function BrandsGrid() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-4">
-            Get to know Wallanda Global's brands
+            Get to know wollanda Global's brands
           </h2>
           <p className="font-sans text-gray-600 text-base sm:text-lg">
             Discover our specialized suite of shipping technology, user-friendly mobile applications, and cargo insurance.

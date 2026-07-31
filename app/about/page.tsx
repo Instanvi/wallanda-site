@@ -109,7 +109,7 @@ export default function AboutUsPage() {
                 We move the world&rsquo;s commerce forward
               </h1>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Wallanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology.
+                wollanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology.
               </p>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function AboutUsPage() {
                 <div className="overflow-hidden rounded-3xl shadow-2xl">
                   <img
                     src="/ship.jpeg"
-                    alt="Wallanda Global team collaborating on logistics technology"
+                    alt="wollanda Global team collaborating on logistics technology"
                     className="w-full h-[550px] object-cover"
                   />
                 </div>
@@ -143,7 +143,7 @@ export default function AboutUsPage() {
 
                 <div className="space-y-5 leading-relaxed text-gray-600">
                   <p>
-                    Wallanda Global was founded on a simple but powerful belief:
+                    wollanda Global was founded on a simple but powerful belief:
                     that the complexity of international logistics should never
                     be a barrier to growth. What began as a single shipping API
                     has evolved into a comprehensive ecosystem serving
@@ -209,7 +209,7 @@ export default function AboutUsPage() {
                   <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
                     <p>
                       Genesis St. James Amahnui is a Cameroonian technology entrepreneur and
-                      software systems designer. As the Founder and CEO of Wallanda Global, he
+                      software systems designer. As the Founder and CEO of wollanda Global, he
                       is dedicated to building innovative logistics and commerce technologies
                       that empower businesses across Africa and global markets. His leadership
                       focuses on creating scalable digital infrastructure that drives efficiency,

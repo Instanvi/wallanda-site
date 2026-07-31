@@ -12,8 +12,8 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" className="inline-block">
               <Image 
-                src="/wallanda-logo.svg" 
-                alt="Wallanda Global Logo" 
+                src="/wollanda-logo.svg" 
+                alt="wollanda Global Logo" 
                 width={140} 
                 height={40} 
                 className="h-8 w-auto"
@@ -105,7 +105,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4 text-xs text-gray-400">
           <p>
-            Wallanda is an intelligent logistics platform. © {new Date().getFullYear()} Wallanda Inc. All rights reserved.
+            wollanda is an intelligent logistics platform. © {new Date().getFullYear()} wollanda Inc. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:underline">Privacy</Link>

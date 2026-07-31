@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
               <section>
                 <h2 className="text-2xl font-bold text-primary mb-4">1. Overview</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  This Privacy Policy explains how Wallanda Global, Inc. and its family of brands Ntigi, Kassongo and Kovasure (together, &ldquo;Wallanda,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) collect, use, share, and protect information when you use our websites, apps, and services (collectively, the &ldquo;Services&rdquo;).
+                  This Privacy Policy explains how wollanda Global, Inc. and its family of brands Ntigi, Kassongo and Kovasure (together, &ldquo;wollanda,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) collect, use, share, and protect information when you use our websites, apps, and services (collectively, the &ldquo;Services&rdquo;).
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Wherever you are shipping from, insuring a shipment, or managing payments through one of our brands, this Policy applies to you. Where local law requires additional disclosures, those are set out in the regional sections further down this page.
@@ -81,9 +81,9 @@ export default function PrivacyPolicyPage() {
                     <li>Carriers and delivery partners needed to fulfill a shipment</li>
                     <li>Payment processors and insurers who support Potta Finance and Kovasure transactions</li>
                     <li>Service providers who host our infrastructure, run analytics, or support our customer care team</li>
-                    <li>Other Wallanda brands, so your account works consistently across our Services</li>
+                    <li>Other wollanda brands, so your account works consistently across our Services</li>
                     <li>Regulators or law enforcement, when required by law</li>
-                    <li>A buyer or successor, if Wallanda is ever involved in a merger, sale, or similar transaction</li>
+                    <li>A buyer or successor, if wollanda is ever involved in a merger, sale, or similar transaction</li>
                   </ul>
                 </div>
               </section>
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
               <section>
                 <h2 className="text-2xl font-bold text-primary mb-4">6. International Data Transfers</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Wallanda operates globally, so your information may be processed in a country other than the one you live in, including the United States. Where required, we use recognized safeguards — such as standard contractual clauses — to protect information transferred across borders.
+                  wollanda operates globally, so your information may be processed in a country other than the one you live in, including the United States. Where required, we use recognized safeguards — such as standard contractual clauses — to protect information transferred across borders.
                 </p>
               </section>
 

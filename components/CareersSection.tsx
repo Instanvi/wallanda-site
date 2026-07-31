@@ -19,7 +19,7 @@ export default function CareersSection() {
             <h2 className="font-display text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
               Join the
               <span className="block text-accent">
-                Wallanda Global team
+                wollanda Global team
               </span>
             </h2>
 
@@ -46,7 +46,7 @@ export default function CareersSection() {
             <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
               <Image
                 src="/team.jpeg"
-                alt="Wallanda Global Team"
+                alt="wollanda Global Team"
                 width={700}
                 height={600}
                 className="h-[500px] w-full object-cover"

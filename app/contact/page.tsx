@@ -63,7 +63,7 @@ export default function ContactPage() {
       role: "Global Headquarters",
       address: "Rue Joss, Bonanjo, Douala",
       phone: "+237 233 44 55 66",
-      email: "douala@wallanda.com",
+      email: "douala@wollanda.com",
       hours: "Mon - Fri: 8:00 AM - 5:00 PM (GMT+1)",
     },
     {
@@ -72,7 +72,7 @@ export default function ContactPage() {
       role: "European Operations Hub",
       address: "30 St Mary Axe (The Gherkin), London",
       phone: "+44 20 7946 0958",
-      email: "london@wallanda.com",
+      email: "london@wollanda.com",
       hours: "Mon - Fri: 9:00 AM - 6:00 PM (GMT)",
     },
     {
@@ -81,7 +81,7 @@ export default function ContactPage() {
       role: "North American Desk",
       address: "1 World Trade Center, New York, NY",
       phone: "+1 212 555 0199",
-      email: "nyc@wallanda.com",
+      email: "nyc@wollanda.com",
       hours: "Mon - Fri: 9:00 AM - 5:00 PM (EST)",
     },
   ];
@@ -120,10 +120,10 @@ export default function ContactPage() {
                     <h3 className="font-display font-bold text-primary text-base mb-1">General Support</h3>
                     <p className="text-xs text-gray-500 mb-3">For customer issues, shipping updates, or tracking help.</p>
                     <a
-                      href="mailto:support@wallanda.com"
+                      href="mailto:support@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
                     >
-                      support@wallanda.com
+                      support@wollanda.com
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
@@ -140,10 +140,10 @@ export default function ContactPage() {
                     <h3 className="font-display font-bold text-primary text-base mb-1">Developer API Desk</h3>
                     <p className="text-xs text-gray-500 mb-3">For Ntigi label integration and webhook implementation help.</p>
                     <a
-                      href="mailto:devs@wallanda.com"
+                      href="mailto:devs@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
                     >
-                      devs@wallanda.com
+                      devs@wollanda.com
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
@@ -160,10 +160,10 @@ export default function ContactPage() {
                     <h3 className="font-display font-bold text-primary text-base mb-1">Media &amp; Public Relations</h3>
                     <p className="text-xs text-gray-500 mb-3">For PR assets, news desk inquiries, and corporate updates.</p>
                     <a
-                      href="mailto:press@wallanda.com"
+                      href="mailto:press@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
                     >
-                      press@wallanda.com
+                      press@wollanda.com
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
@@ -180,10 +180,10 @@ export default function ContactPage() {
                     <h3 className="font-display font-bold text-primary text-base mb-1">Kovasure Cargo Protection</h3>
                     <p className="text-xs text-gray-500 mb-3">For policy status, claims resolution, and transit insurance quotes.</p>
                     <a
-                      href="mailto:insurance@wallanda.com"
+                      href="mailto:insurance@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
                     >
-                      insurance@wallanda.com
+                      insurance@wollanda.com
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="font-display font-extrabold text-2xl text-primary mb-3">Message Sent!</h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                      Thank you for contacting Wallanda Global. A logistics coordinator from our Douala engineering hub will review your query and reply shortly.
+                      Thank you for contacting wollanda Global. A logistics coordinator from our Douala engineering hub will review your query and reply shortly.
                     </p>
                     <Button onClick={() => setStatus("idle")} variant="outline">
                       Send another message

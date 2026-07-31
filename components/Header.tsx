@@ -15,7 +15,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/wollanda.svg"
-            alt="Wallanda Global Logo"
+            alt="wollanda Global Logo"
             width={50}
             height={44}
             className="h-20 w-auto"
