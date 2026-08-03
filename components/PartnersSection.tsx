@@ -6,9 +6,11 @@ export default function PartnersSection() {
     { src: "/DHL-Logo.wine.svg", alt: "DHL", h: "100px" },
     { src: "/FedEx_Express.webp", alt: "FedEx", h: "35px" },
     { src: "/United_Parcel_Service-Logo.wine.svg", alt: "UPS", h: "70px" },
-    { src: "/USPS_-_Color_Logo.svg", alt: "USPS", h: "38px" },
     { src: "/DPD_id9sTo-S4f_0.svg", alt: "DPD", h: "30px" },
+    { src: "/campost.png", alt: "campost", h: "60px" },
     { src: "/Yodel_logo.webp", alt: "Yodel", h: "26px" },
+    { src: "/USPS_-_Color_Logo.svg", alt: "USPS", h: "38px" },
+
   ];
 
   return (
@@ -25,7 +27,7 @@ export default function PartnersSection() {
         </div>
 
         {/* Carriers Grid - Simple and Clean */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 items-center">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 items-center">
           {carriers.map((carrier) => (
             <div
               key={carrier.alt}

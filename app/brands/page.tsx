@@ -215,7 +215,7 @@ export default function BrandsPage() {
                     icon={<Cpu className="h-7 w-7" />}
                     logo="/ntigi1.svg"
                     accentColor="bg-primary"
-                    bgcolor="bg-[#85c7ed]"
+                    bgcolor="bg-[#263071]"
                     badges={[
                         { icon: <Cpu className="h-4 w-4" />, label: "API-First" },
                         { icon: <Truck className="h-4 w-4" />, label: "600+ Carriers" },
@@ -276,7 +276,7 @@ export default function BrandsPage() {
                     icon={<Umbrella className="h-7 w-7" />}
                     logo="/kovasure.svg"
                     accentColor="bg-primary"
-                    bgcolor="bg-orange-500"
+                    bgcolor="bg-[#0008ff]"
                     badges={[
                         { icon: <Shield className="h-4 w-4" />, label: "Protected" },
                         { icon: <Umbrella className="h-4 w-4" />, label: "All-Risk" },
