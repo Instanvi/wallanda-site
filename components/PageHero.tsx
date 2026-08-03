@@ -17,7 +17,7 @@ export default function PageHero({ title, description, backgroundImage = "/hero/
           className="absolute inset-0 h-full w-full object-cover opacity-20"
         />
         {/* Dark gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#001D47]/95 via-[#001D47]/90 to-[#001D47]/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#001D47]/80 via-[#001D47]/90 to-[#001D47]/70 opacity-50" />
         
         {/* Gradient overlays for visual interest */}
         <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-accent/10 blur-3xl translate-x-1/3 -translate-y-1/3" />

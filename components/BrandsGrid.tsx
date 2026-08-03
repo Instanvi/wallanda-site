@@ -10,6 +10,9 @@ interface BrandItem {
   link: string;
   icon: React.ReactNode;
   logo?: string;
+  bgColorClass: string;
+  textColorClass: string;
+  tagColorClass: string;
   tag: string;
 }
 
@@ -22,6 +25,9 @@ export default function BrandsGrid() {
       link: "/brands#ntigi",
       icon: <Cpu className="h-7 w-7" />,
       logo: "/ntigi1.svg",
+      bgColorClass: "bg-[#85c7ed]",
+      textColorClass: "text-primary",
+      tagColorClass: "text-blue-100",
     },
     {
       name: "Kassongo",
@@ -30,6 +36,9 @@ export default function BrandsGrid() {
       link: "/brands#kassongo",
       icon: <Smartphone className="h-7 w-7" />,
       logo: "/kassongo.svg",
+      bgColorClass: "bg-green-900",
+      textColorClass: "text-white",
+      tagColorClass: "text-green-100",
     },
     {
       name: "Kovasure",
@@ -38,6 +47,9 @@ export default function BrandsGrid() {
       link: "/brands#kovasure",
       icon: <Umbrella className="h-7 w-7" />,
       logo: "/kovasure.svg",
+      bgColorClass: "bg-orange-600",
+      textColorClass: "text-white",
+      tagColorClass: "text-orange-100",
     },
   ];
 
@@ -57,12 +69,12 @@ export default function BrandsGrid() {
           {brands.map((brand, idx) => (
             <div
               key={idx}
-              className={`flex flex-col justify-between bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1`}
+              className={`flex flex-col justify-between ${brand.bgColorClass} p-8 rounded-2xl shadow-sm border border-gray-200/80 transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
                   {brand.logo ? (
-                    <div className="h-16 flex items-center bg-gray-50 rounded-lg px-4 py-2">
+                    <div className="h-16 flex items-center bg-white rounded-lg px-4 py-2">
                       <Image 
                         src={brand.logo} 
                         alt={`${brand.name} logo`}
@@ -72,26 +84,26 @@ export default function BrandsGrid() {
                       />
                     </div>
                   ) : (
-                    <span className="p-3 bg-gray-50 rounded-xl text-primary font-semibold">
+                    <span className={`p-3 bg-white rounded-xl ${brand.textColorClass} font-semibold`}>
                       {brand.icon}
                     </span>
                   )}
-                  <span className="text-xs uppercase font-extrabold tracking-wider text-gray-400">
+                  <span className={`text-xs uppercase font-extrabold tracking-wider ${brand.tagColorClass}`}>
                     {brand.tag}
                   </span>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-primary mb-3">
+                <h3 className={`font-display text-2xl font-bold ${brand.textColorClass} mb-3`}>
                   {brand.name}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className={`text-sm ${brand.textColorClass} opacity-90 leading-relaxed`}>
                   {brand.description}
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-gray-100 mt-8">
+              <div className="pt-6 border-t border-white/20 mt-8">
                 <Link
                   href={brand.link}
-                  className="inline-flex items-center gap-1 text-sm font-bold text-accent hover:text-accent-hover transition-colors"
+                  className={`inline-flex items-center gap-1 text-sm font-bold ${brand.textColorClass} hover:opacity-80 transition-opacity`}
                 >
                   Learn More
                   <ArrowUpRight className="h-4 w-4" />

@@ -55,11 +55,12 @@ interface BrandSectionProps {
     icon: ReactNode;
     logo: string;
     accentColor: string;
+    bgcolor: string;
     badges: { icon: ReactNode; label: string }[];
     reverse?: boolean;
 }
 
-function BrandSection({ name, tagline, description, features, testimonial, ctaUrl, ctaLabel, icon, logo, accentColor, badges, reverse }: BrandSectionProps) {
+function BrandSection({ name, tagline, description, features, testimonial, ctaUrl, ctaLabel, icon, logo, accentColor, badges, reverse, bgcolor }: BrandSectionProps) {
     return (
         <section id={name.toLowerCase()} className="py-16 md:py-20 lg:py-28 border-b border-gray-100 last:border-b-0 scroll-mt-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
@@ -126,7 +127,7 @@ function BrandSection({ name, tagline, description, features, testimonial, ctaUr
                     {/* Visual */}
                     <div className={reverse ? "lg:order-1" : ""}>
                         <div className="relative aspect-square max-w-lg mx-auto">
-                            <div className="absolute inset-0 rounded-2xl md:rounded-3xl bg-primary/6 border border-gray-100 overflow-hidden">
+                            <div className={`absolute inset-0 rounded-2xl md:rounded-3xl ${bgcolor} border border-gray-100 overflow-hidden`}>
                                 <div className={`absolute inset-0 opacity-10 bg-gradient-to-br ${accentColor.replace("bg-", "from-")} to-primary`} />
 
                                 <div className="absolute top-4 left-4 right-4 bottom-4 md:top-8 md:left-8 md:right-8 md:bottom-8 flex items-center justify-center">
@@ -214,6 +215,7 @@ export default function BrandsPage() {
                     icon={<Cpu className="h-7 w-7" />}
                     logo="/ntigi1.svg"
                     accentColor="bg-primary"
+                    bgcolor="bg-[#85c7ed]"
                     badges={[
                         { icon: <Cpu className="h-4 w-4" />, label: "API-First" },
                         { icon: <Truck className="h-4 w-4" />, label: "600+ Carriers" },
@@ -243,6 +245,7 @@ export default function BrandsPage() {
                     icon={<Smartphone className="h-7 w-7" />}
                     logo="/kassongo.svg"
                     accentColor="bg-accent"
+                    bgcolor="bg-green-800"
                     badges={[
                         { icon: <Smartphone className="h-4 w-4" />, label: "Mobile-First" },
                         { icon: <Globe className="h-4 w-4" />, label: "190+ Countries" },
@@ -273,6 +276,7 @@ export default function BrandsPage() {
                     icon={<Umbrella className="h-7 w-7" />}
                     logo="/kovasure.svg"
                     accentColor="bg-primary"
+                    bgcolor="bg-orange-500"
                     badges={[
                         { icon: <Shield className="h-4 w-4" />, label: "Protected" },
                         { icon: <Umbrella className="h-4 w-4" />, label: "All-Risk" },

@@ -106,7 +106,7 @@ export default function AboutUsPage() {
         <PageHero
           title="We move the world's commerce forward"
           description="wollanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology."
-          backgroundImage="/ship.jpeg"
+          backgroundImage="/shipment.jpg"
         />
 
 
