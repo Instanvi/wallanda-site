@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Clock, Calendar, Tag, Search, Filter, ArrowRight, Newspaper } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 
 export interface UnifiedPressPost {
@@ -59,19 +60,12 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
       <Header />
 
       <main className="flex-1">
-        {/* Page Header */}
-        <section className="bg-white border-b border-gray-100">
-          <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
-            <div className="max-w-3xl">
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
-                News, updates, and trade insights
-              </h1>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                Stay connected with the latest corporate mergers, strategic investments, product rollouts, and executive awards at wollanda Global.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Page Hero with Background Image */}
+        <PageHero
+          title="News, updates, and trade insights"
+          description="Stay connected with the latest corporate mergers, strategic investments, product rollouts, and executive awards at wollanda Global."
+          backgroundImage="/hero/image1.jpg"
+        />
 
         {/* Filter and Search Bar */}
         <section className="sticky top-20 z-40 w-full py-5 bg-white/80 backdrop-blur-lg border-b border-gray-200/80 shadow-sm">

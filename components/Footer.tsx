@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" className="inline-block">
               <Image 
-                src="/wollanda-logo.svg" 
+                src="/wallanda-logo.svg" 
                 alt="wollanda Global Logo" 
                 width={140} 
                 height={40} 

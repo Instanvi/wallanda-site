@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import BrandsGrid from "@/components/BrandsGrid";
 import {
@@ -52,19 +53,12 @@ export default function CompanyPage() {
       <Header />
 
       <main className="flex-1">
-        {/* Page Header */}
-        <section className="bg-white border-b border-gray-100">
-          <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
-            <div className="max-w-3xl">
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
-                One ecosystem. Endless connections.
-              </h1>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                wollanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Page Hero with Background Image */}
+        <PageHero
+          title="One ecosystem. Endless connections."
+          description="wollanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure."
+          backgroundImage="/hero/image3.jpg"
+        />
 
         {/* Stats Section */}
         <section className="relative z-20 -mt-12 max-w-5xl mx-auto px-6">

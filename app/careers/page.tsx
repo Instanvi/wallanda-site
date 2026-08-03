@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 import {
   Briefcase,
@@ -92,23 +93,12 @@ export default function CareersPage() {
       <Header />
 
       <main className="flex-1">
-        {/* Banner */}
-        <section className="relative py-28 bg-[#001D47] text-white overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02),transparent_60%)]"></div>
-          </div>
-
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 text-center">
-            <h1 className="font-display text-4xl sm:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-              Build the future of borderless trade.
-            </h1>
-            <p className="font-sans text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We are a team of software engineers, logistics experts, and Fintech builders working globally to streamline international commerce. Join us and shape how products move around the world.
-            </p>
-          </div>
-        </section>
+        {/* Page Hero with Background Image */}
+        <PageHero
+          title="Build the future of borderless trade."
+          description="We are a team of software engineers, logistics experts, and Fintech builders working globally to streamline international commerce. Join us and shape how products move around the world."
+          backgroundImage="/ship.jpeg"
+        />
 
         {/* Benefits Section */}
         <section className="py-24 bg-white">

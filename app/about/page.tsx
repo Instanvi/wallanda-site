@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import {
@@ -24,7 +25,7 @@ import {
 } from "lucide-react";
 import BrandsGrid from "@/components/BrandsGrid";
 import PartnersSection from "@/components/PartnersSection";
-import ValueCard from "@/components/valuecard";
+import ValueCard from "@/components/ValueCard";
 
 
 interface BrandItem {
@@ -101,19 +102,12 @@ export default function AboutUsPage() {
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
       <main className="flex-1">
-        {/* Page Header */}
-        <section className="bg-white border-b border-gray-100">
-          <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
-            <div className="max-w-3xl">
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
-                We move the world&rsquo;s commerce forward
-              </h1>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                wollanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Page Hero with Background Image */}
+        <PageHero
+          title="We move the world's commerce forward"
+          description="wollanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology."
+          backgroundImage="/ship.jpeg"
+        />
 
 
         <section className="py-24 md:py-32 bg-white">
@@ -254,7 +248,7 @@ export default function AboutUsPage() {
                 {/* Right Image */}
                 <div className="md:col-span-2 relative min-h-[420px]">
                   <img
-                    src="/boss.jpeg"
+                    src="/emoji.avif"
                     alt="Genesis St. James Amahnui"
                     className="absolute inset-0 h-full w-full object-cover"
                   />

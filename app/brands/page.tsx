@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
@@ -20,7 +21,7 @@ import {
     ChevronRight,
     Quote,
 } from "lucide-react";
-import FeaturePill from "@/components/featurepill";
+import FeaturePill from "@/components/FeaturePill";
 
 
 function Testimonial({ quote, name, title, company }: { quote: string; name: string; title: string; company: string }) {
@@ -185,19 +186,12 @@ export default function BrandsPage() {
         <div className="flex flex-col min-h-screen bg-white">
             <Header />
             <main className="flex-1">
-                {/* Page Header */}
-                <section className="bg-white border-b border-gray-100">
-                    <div className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
-                        <div className="max-w-3xl">
-                            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
-                                Deliver confidence with wollanda
-                            </h1>
-                            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                                Our family of specialized brands gives you the technology, coverage, and connectivity to scale across borders with complete confidence.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                {/* Page Hero with Background Image */}
+                <PageHero
+                    title="Deliver confidence with wollanda"
+                    description="Our family of specialized brands gives you the technology, coverage, and connectivity to scale across borders with complete confidence."
+                    backgroundImage="/hero/image2.jpg"
+                />
 
                 <BrandSection
                     name="Ntigi"

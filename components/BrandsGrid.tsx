@@ -10,7 +10,6 @@ interface BrandItem {
   link: string;
   icon: React.ReactNode;
   logo?: string;
-  accent: string;
   tag: string;
 }
 
@@ -23,7 +22,6 @@ export default function BrandsGrid() {
       link: "/brands#ntigi",
       icon: <Cpu className="h-7 w-7" />,
       logo: "/ntigi1.svg",
-      accent: "border-t-4 border-primary",
     },
     {
       name: "Kassongo",
@@ -32,7 +30,6 @@ export default function BrandsGrid() {
       link: "/brands#kassongo",
       icon: <Smartphone className="h-7 w-7" />,
       logo: "/kassongo.svg",
-      accent: "border-t-4 border-green-900",
     },
     {
       name: "Kovasure",
@@ -41,7 +38,6 @@ export default function BrandsGrid() {
       link: "/brands#kovasure",
       icon: <Umbrella className="h-7 w-7" />,
       logo: "/kovasure.svg",
-      accent: "border-t-4 border-orange-500",
     },
   ];
 
@@ -61,7 +57,7 @@ export default function BrandsGrid() {
           {brands.map((brand, idx) => (
             <div
               key={idx}
-              className={`flex flex-col justify-between bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1 ${brand.accent}`}
+              className={`flex flex-col justify-between bg-white p-8 rounded-2xl shadow-sm border border-gray-200/80 transition-all duration-300 hover:shadow-md hover:-translate-y-1`}
             >
               <div>
                 <div className="flex items-center justify-between mb-6">

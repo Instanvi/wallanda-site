@@ -18,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-[#001D47] text-white overflow-hidden">
+    <section className="relative min-h-screen bg-[#001D47] text-white overflow-hidden flex items-center">
       {/* Background Image Slideshow */}
       <div className="absolute inset-0 z-0">
         {HERO_IMAGES.map((img, idx) => (
@@ -39,9 +39,9 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-8 py-20 md:py-28">
+      <div className="relative z-10 w-full mx-auto max-w-7xl px-6 md:px-8 py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
             A new era in end-to-end logistics starts now
           </h1>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed mb-10">
