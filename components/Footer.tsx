@@ -12,11 +12,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link href="/" className="inline-block">
               <Image 
-                src="/wallanda-logo.svg" 
+                src="/wollanda-white.svg" 
                 alt="wollanda Global Logo" 
-                width={140} 
-                height={40} 
-                className="h-8 w-auto"
+                width={120} 
+                height={32} 
+                className="h-7 w-auto"
               />
             </Link>
             <p className="text-sm text-gray-300 max-w-xs">

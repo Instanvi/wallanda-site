@@ -28,11 +28,11 @@ export default function Header({ transparent = false }: HeaderProps) {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/wollanda.svg"
+            src={transparent ? "/wollanda-white.svg" : "/wollandaLogo.svg"}
             alt="wollanda Global Logo"
-            width={50}
-            height={44}
-            className="h-20 w-auto"
+            width={120}
+            height={32}
+            className="h-8 w-auto"
             priority
           />
         </Link>
