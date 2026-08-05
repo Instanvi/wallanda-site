@@ -40,6 +40,13 @@ COPY . .
 
 ENV NODE_ENV=production
 
+# Contentful credentials — pass at build time via --build-arg
+# e.g. docker build --build-arg CONTENTFUL_SPACE_ID=xxx --build-arg CONTENTFUL_ACCESS_TOKEN=yyy
+ARG CONTENTFUL_SPACE_ID
+ARG CONTENTFUL_ACCESS_TOKEN
+ENV CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID
+ENV CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN
+
 # Optional: disable telemetry during build
 # ENV NEXT_TELEMETRY_DISABLED=1
 
@@ -64,6 +71,12 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3007
 ENV HOSTNAME="0.0.0.0"
+
+# Contentful credentials — pass at runtime via docker run -e or compose environment
+ARG CONTENTFUL_SPACE_ID
+ARG CONTENTFUL_ACCESS_TOKEN
+ENV CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID
+ENV CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN
 
 # Optional: disable telemetry at runtime
 # ENV NEXT_TELEMETRY_DISABLED=1

@@ -210,7 +210,7 @@ export default function BrandsPage() {
                         title: "VP of Operations",
                         company: "Atlas Commerce",
                     }}
-                    ctaUrl="https://ntigi.com"
+                    ctaUrl="https://ntigi.cm"
                     ctaLabel="Visit Ntigi"
                     icon={<Cpu className="h-7 w-7" />}
                     logo="/ntigi1.svg"
@@ -332,7 +332,7 @@ export default function BrandsPage() {
                                 </ul>
                                 <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-gray-100">
                                     <a
-                                        href="https://new.ntigi.cm"
+                                        href="https://ntigi.cm"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
