@@ -40,7 +40,7 @@ COPY . .
 
 ENV NODE_ENV=production
 
-# Contentful credentials — pass at build time via --build-arg
+# Contentful credentials pass at build time via --build-arg
 # e.g. docker build --build-arg CONTENTFUL_SPACE_ID=xxx --build-arg CONTENTFUL_ACCESS_TOKEN=yyy
 ARG CONTENTFUL_SPACE_ID
 ARG CONTENTFUL_ACCESS_TOKEN
@@ -72,7 +72,7 @@ ENV NODE_ENV=production
 ENV PORT=3007
 ENV HOSTNAME="0.0.0.0"
 
-# Contentful credentials — pass at runtime via docker run -e or compose environment
+# Contentful credentials pass at runtime via docker run -e or compose environment
 ARG CONTENTFUL_SPACE_ID
 ARG CONTENTFUL_ACCESS_TOKEN
 ENV CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID

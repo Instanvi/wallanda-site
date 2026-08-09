@@ -197,7 +197,7 @@ export default function BrandsPage() {
                 <BrandSection
                     name="Ntigi"
                     tagline="Ntigi Logistics"
-                    description="Ntigi is your key to unlocking scalable logistics success. Our powerful, user-friendly platform empowers online sellers and enterprises to manage, process, fulfill, and ship orders efficiently — no matter the volume. With deep carrier API integrations, automated routing intelligence, and real-time label generation, Ntigi makes scaling your shipping operations effortless."
+                    description="Ntigi is your key to unlocking scalable logistics success. Our powerful, user-friendly platform empowers online sellers and enterprises to manage, process, fulfill, and ship orders efficiently no matter the volume. With deep carrier API integrations, automated routing intelligence, and real-time label generation, Ntigi makes scaling your shipping operations effortless."
                     features={[
                         { icon: <Cpu className="h-3.5 w-3.5" />, label: "API-First Architecture" },
                         { icon: <Zap className="h-3.5 w-3.5" />, label: "Automated Routing" },
@@ -235,7 +235,7 @@ export default function BrandsPage() {
                         { icon: <Zap className="h-3.5 w-3.5" />, label: "One-Tap Booking" },
                     ]}
                     testimonial={{
-                        quote: "As a small business owner, I never thought I could access the same shipping rates as the big players. Kassongo leveled the playing field — my customers get faster delivery and I save over 20% on every shipment.",
+                        quote: "As a small business owner, I never thought I could access the same shipping rates as the big players. Kassongo leveled the playing field my customers get faster delivery and I save over 20% on every shipment.",
                         name: "Amara Okafor",
                         title: "Founder",
                         company: "Lagos Luxe Interiors",

@@ -84,7 +84,7 @@ export const pressArticles: Record<string, PressArticle> = {
       },
       {
         type: "p",
-        content: "\"The merger between Potta Finance and wollanda marks a major turning point in how global supply chains operate. We are building the infrastructure that will allow any enterprise to operate borders-free, resolving both the movement of physical goods and the digital payments backing them in real-time.\" — Genesis St. James Amahnui, CEO of wollanda Global."
+        content: "\"The merger between Potta Finance and wollanda marks a major turning point in how global supply chains operate. We are building the infrastructure that will allow any enterprise to operate borders-free, resolving both the movement of physical goods and the digital payments backing them in real-time.\" Genesis St. James Amahnui, CEO of wollanda Global."
       },
       {
         type: "cta",

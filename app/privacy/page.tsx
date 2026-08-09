@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
               <section>
                 <h2 className="text-2xl font-bold text-primary mb-4">6. International Data Transfers</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  wollanda operates globally, so your information may be processed in a country other than the one you live in, including the United States. Where required, we use recognized safeguards — such as standard contractual clauses — to protect information transferred across borders.
+                  wollanda operates globally, so your information may be processed in a country other than the one you live in, including the United States. Where required, we use recognized safeguards such as standard contractual clauses to protect information transferred across borders.
                 </p>
               </section>
 
