@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ArrowUpRight, Cpu, Smartphone, Umbrella } from "lucide-react";
 
@@ -17,11 +18,13 @@ interface BrandItem {
 }
 
 export default function BrandsGrid() {
+  const t = useTranslations("Brands");
+  
   const brands: BrandItem[] = [
     {
-      name: "Ntigi",
-      tag: "Shipping Technology",
-      description: "Advanced desktop and web shipping technology solutions powering label generation, automated routing, and carrier API integrations.",
+      name: t("ntigi.name"),
+      tag: t("ntigi.tag"),
+      description: t("ntigi.description"),
       link: "/brands#ntigi",
       icon: <Cpu className="h-7 w-7" />,
       logo: "/ntigi1.svg",
@@ -30,9 +33,9 @@ export default function BrandsGrid() {
       tagColorClass: "text-blue-100",
     },
     {
-      name: "Kassongo",
-      tag: "Shipping App",
-      description: "The premier consumer and commercial shipping application connecting users to global delivery networks and localized hubs instantly.",
+      name: t("kassongo.name"),
+      tag: t("kassongo.tag"),
+      description: t("kassongo.description"),
       link: "/brands#kassongo",
       icon: <Smartphone className="h-7 w-7" />,
       logo: "/kassongo.svg",
@@ -41,9 +44,9 @@ export default function BrandsGrid() {
       tagColorClass: "text-green-100",
     },
     {
-      name: "Kovasure",
-      tag: "Cargo Insurance",
-      description: "Fully integrated cargo insurance providing real-time quotes, peace-of-mind transit protection, and automated claim handling.",
+      name: t("kovasure.name"),
+      tag: t("kovasure.tag"),
+      description: t("kovasure.description"),
       link: "/brands#kovasure",
       icon: <Umbrella className="h-7 w-7" />,
       logo: "/kovasure.svg",
@@ -58,10 +61,10 @@ export default function BrandsGrid() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-4">
-            Get to know wollanda Global's brands
+            {t("title")}
           </h2>
           <p className="font-sans text-gray-600 text-base sm:text-lg">
-            Discover our specialized suite of shipping technology, user-friendly mobile applications, and cargo insurance.
+            {t("description")}
           </p>
         </div>
 
@@ -105,7 +108,7 @@ export default function BrandsGrid() {
                   href={brand.link}
                   className={`inline-flex items-center gap-1 text-sm font-bold ${brand.textColorClass} hover:opacity-80 transition-opacity`}
                 >
-                  Learn More
+                  {t("learnMore")}
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>

@@ -1,0 +1,74 @@
+{
+  "Metadata": {
+    "title": "wollanda Global - Intelligent End-to-End Logistics Platform",
+    "description": "An intelligent logistics platform powering commerce worldwide. Bringing together leading technology, global carriers, and unified integrations.",
+    "keywords": "logistics, supply chain, freight forwarding, cargo insurance, global shipping"
+  },
+  "Header": {
+    "about": "About Us",
+    "brands": "Brands",
+    "press": "Press",
+    "company": "Company",
+    "careers": "Careers",
+    "toggleMenu": "Toggle menu"
+  },
+  "Hero": {
+    "title": "A new era in end-to-end logistics starts now",
+    "description": "Bringing together leading technology, global carriers, and unified integrations to optimize, protect, and scale your fulfillment operations worldwide.",
+    "exploreBrands": "Explore Our Brands",
+    "learnMore": "Learn More"
+  },
+  "Brands": {
+    "title": "Get to know wollanda Global's brands",
+    "description": "Discover our specialized suite of shipping technology, user-friendly mobile applications, and cargo insurance.",
+    "learnMore": "Learn More",
+    "ntigi": {
+      "name": "Ntigi",
+      "tag": "Shipping Technology",
+      "description": "Advanced desktop and web shipping technology solutions powering label generation, automated routing, and carrier API integrations."
+    },
+    "kassongo": {
+      "name": "Kassongo",
+      "tag": "Shipping App",
+      "description": "The premier consumer and commercial shipping application connecting users to global delivery networks and localized hubs instantly."
+    },
+    "kovasure": {
+      "name": "Kovasure",
+      "tag": "Cargo Insurance",
+      "description": "Fully integrated cargo insurance providing real-time quotes, peace-of-mind transit protection, and automated claim handling."
+    }
+  },
+  "Footer": {
+    "platformDescription": "An intelligent end-to-end logistics platform powering commerce worldwide.",
+    "brands": "Brands",
+    "company": "Company",
+    "legal": "Legal",
+    "aboutUs": "About Us",
+    "ourBrands": "Our Brands",
+    "pressNews": "Press & News",
+    "contact": "Contact",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "wollanda is an intelligent logistics platform. © {year} wollanda Inc. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "ntigi": "Ntigi",
+    "kassongo": "Kassongo",
+    "kovasure": "Kovasure",
+    "viewAllBrands": "View All Brands"
+  },
+  "About": {
+    "title": "About wollanda Global",
+    "description": "Building the intelligent logistics infrastructure for modern commerce"
+  },
+  "Contact": {
+    "title": "Connect with our global offices",
+    "description": "Have questions about our shipping technology APIs, consumer logistics application, or cargo insurance policies? Send us a message and our support desks will reply shortly."
+  },
+  "Common": {
+    "readMore": "Read More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "viewDetails": "View Details"
+  }
+}

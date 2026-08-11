@@ -1,32 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "wollanda",
-  description:
-    "wollanda Global is a technology company building innovative logistics, shipping, cargo insurance, and digital commerce solutions through its family of brands, including Ntigi, Kassongo, and Kovasure.",
-};
-
+// Root layout — intentionally bare.
+// The middleware (proxy.ts) immediately redirects any request
+// at "/" to the locale-prefixed path (e.g. /en or /fr).
+// The actual <html> shell lives in app/[locale]/layout.tsx.
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        {children}
-      </body>
-    </html>
-  );
+}) {
+  return children;
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { getBlogPosts, isContentfulConfigured } from "@/lib/contentful";
-import { relatedPressData } from "@/app/press/pressData";
+import { relatedPressData } from "@/app/[locale]/press/pressData";
 
 interface PressItem {
   title: string;

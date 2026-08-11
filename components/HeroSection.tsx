@@ -2,8 +2,11 @@
 
 import { Button } from "@/components/ui/Button";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Hero");
+  
   return (
     <section className="relative min-h-[70vh] overflow-hidden bg-[#001D47] text-white flex items-center">
 
@@ -41,13 +44,11 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-8 py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6">
-            A new era in end-to-end logistics starts now
+            {t("title")}
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed text-white/80 mb-10">
-            Bringing together leading technology, global carriers, and
-            unified integrations to optimize, protect, and scale your
-            fulfillment operations worldwide.
+            {t("description")}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -58,7 +59,7 @@ export default function HeroSection() {
               size="lg"
               className="shadow-lg shadow-black/20 hover:scale-[1.02]"
             >
-              Explore Our Brands
+              {t("exploreBrands")}
               <ChevronRight className="h-5 w-5" />
             </Button>
 
@@ -68,7 +69,7 @@ export default function HeroSection() {
               size="lg"
             >
               <ArrowUpRight className="h-5 w-5" />
-              Learn More
+              {t("learnMore")}
             </Button>
 
           </div>

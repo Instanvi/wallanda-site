@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Button from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
+import { toast } from "sonner";
 import {
   Mail,
   Phone,
@@ -40,20 +41,44 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "general",
-        message: "",
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type: "contact",
+          data: formData,
+        }),
       });
-    }, 1500);
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("success");
+        toast.success("Message sent successfully to support@instanvi.com!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          subject: "general",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        toast.error(result.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      toast.error("An error occurred. Please try again later.");
+    }
   };
 
   const offices = [

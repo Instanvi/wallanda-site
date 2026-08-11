@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  
   return (
     <footer className="w-full bg-[#001D47] text-white pt-16 pb-8 border-t border-[#002B69]">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
@@ -20,34 +23,34 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-gray-300 max-w-xs">
-              An intelligent end-to-end logistics platform powering commerce worldwide.
+              {t("platformDescription")}
             </p>
           </div>
 
           {/* Products Column */}
           <div>
             <h4 className="text-sm font-bold tracking-wider text-accent uppercase mb-4">
-              Brands
+              {t("brands")}
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/brands#ntigi" className="hover:text-accent transition-colors">
-                  Ntigi
+                  {t("ntigi")}
                 </Link>
               </li>
               <li>
                 <Link href="/brands#kassongo" className="hover:text-accent transition-colors">
-                  Kassongo
+                  {t("kassongo")}
                 </Link>
               </li>
               <li>
                 <Link href="/brands#kovasure" className="hover:text-accent transition-colors">
-                  Kovasure
+                  {t("kovasure")}
                 </Link>
               </li>
               <li>
                 <Link href="/brands" className="hover:text-accent transition-colors">
-                  View All Brands
+                  {t("viewAllBrands")}
                 </Link>
               </li>
             </ul>
@@ -56,27 +59,27 @@ export default function Footer() {
           {/* Company Column */}
           <div>
             <h4 className="text-sm font-bold tracking-wider text-accent uppercase mb-4">
-              Company
+              {t("company")}
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/about" className="hover:text-accent transition-colors">
-                  About Us
+                  {t("aboutUs")}
                 </Link>
               </li>
               <li>
                 <Link href="/brands" className="hover:text-accent transition-colors">
-                  Our Brands
+                  {t("ourBrands")}
                 </Link>
               </li>
               <li>
                 <Link href="/press" className="hover:text-accent transition-colors">
-                  Press & News
+                  {t("pressNews")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-accent transition-colors">
-                  Contact
+                  {t("contact")}
                 </Link>
               </li>
             </ul>

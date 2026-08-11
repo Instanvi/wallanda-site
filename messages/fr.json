@@ -1,0 +1,74 @@
+{
+  "Metadata": {
+    "title": "wollanda Global - Plateforme Logistique Intelligente de Bout en Bout",
+    "description": "Une plateforme logistique intelligente alimentant le commerce dans le monde entier. Réunissant les technologies de pointe, les transporteurs mondiaux et les intégrations unifiées.",
+    "keywords": "logistique, chaîne d'approvisionnement, transitaire, assurance cargo, expédition mondiale"
+  },
+  "Header": {
+    "about": "À Propos",
+    "brands": "Marques",
+    "press": "Presse",
+    "company": "Entreprise",
+    "careers": "Carrières",
+    "toggleMenu": "Basculer le menu"
+  },
+  "Hero": {
+    "title": "Une nouvelle ère dans la logistique de bout en bout commence maintenant",
+    "description": "Rassemblant les technologies de pointe, les transporteurs mondiaux et les intégrations unifiées pour optimiser, protéger et faire évoluer vos opérations de logistique dans le monde entier.",
+    "exploreBrands": "Découvrez Nos Marques",
+    "learnMore": "En Savoir Plus"
+  },
+  "Brands": {
+    "title": "Découvrez les marques de wollanda Global",
+    "description": "Découvrez notre suite spécialisée de technologie d'expédition, d'applications mobiles conviviales et d'assurance cargo.",
+    "learnMore": "En savoir plus",
+    "ntigi": {
+      "name": "Ntigi",
+      "tag": "Technologie d'Expédition",
+      "description": "Solutions technologiques d'expédition de bureau et web avancées alimentant la génération d'étiquettes, le routage automatisé et les intégrations API de transporteurs."
+    },
+    "kassongo": {
+      "name": "Kassongo",
+      "tag": "Application d'Expédition",
+      "description": "L'application d'expédition grand public et commerciale de premier plan connectant les utilisateurs aux réseaux de livraison mondiaux et aux hubs localisés instantanément."
+    },
+    "kovasure": {
+      "name": "Kovasure",
+      "tag": "Assurance Cargo",
+      "description": "Assurance cargo entièrement intégrée fournissant des devis en temps réel, une protection de transit en toute tranquillité et une gestion automatisée des réclamations."
+    }
+  },
+  "Footer": {
+    "platformDescription": "Une plateforme logistique intelligente de bout en bout alimentant le commerce dans le monde entier.",
+    "brands": "Marques",
+    "company": "Entreprise",
+    "legal": "Légal",
+    "aboutUs": "À Propos",
+    "ourBrands": "Nos Marques",
+    "pressNews": "Presse & Actualités",
+    "contact": "Contact",
+    "termsOfService": "Conditions d'Utilisation",
+    "privacyPolicy": "Politique de Confidentialité",
+    "copyright": "wollanda est une plateforme logistique intelligente. © {year} wollanda Inc. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "ntigi": "Ntigi",
+    "kassongo": "Kassongo",
+    "kovasure": "Kovasure",
+    "viewAllBrands": "Voir Toutes les Marques"
+  },
+  "About": {
+    "title": "À Propos de wollanda Global",
+    "description": "Construire l'infrastructure logistique intelligente pour le commerce moderne"
+  },
+  "Contact": {
+    "title": "Connectez-vous avec nos bureaux mondiaux",
+    "description": "Vous avez des questions sur nos API de technologie d'expédition, notre application de logistique grand public ou nos polices d'assurance cargo ? Envoyez-nous un message et nos bureaux d'assistance répondront rapidement."
+  },
+  "Common": {
+    "readMore": "Lire Plus",
+    "getStarted": "Commencer",
+    "contactUs": "Nous Contacter",
+    "viewDetails": "Voir Les Détails"
+  }
+}

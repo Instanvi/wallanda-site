@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
@@ -11,6 +12,7 @@ interface HeaderProps {
 
 export default function Header({ transparent = false }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("Header");
 
   return (
     <header 
@@ -47,7 +49,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                 : 'text-gray-600 hover:text-primary'
             }`}
           >
-            About Us
+            {t("about")}
           </Link>
           <Link
             href="/brands"
@@ -57,7 +59,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                 : 'text-gray-600 hover:text-primary'
             }`}
           >
-            Brands
+            {t("brands")}
           </Link>
           <Link
             href="/press"
@@ -67,7 +69,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                 : 'text-gray-600 hover:text-primary'
             }`}
           >
-            Press
+            {t("press")}
           </Link>
           <Link
             href="/company"
@@ -77,7 +79,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                 : 'text-gray-600 hover:text-primary'
             }`}
           >
-            Company
+            {t("company")}
           </Link>
           <Link
             href="/careers"
@@ -87,7 +89,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                 : 'text-gray-600 hover:text-primary'
             }`}
           >
-            Careers
+            {t("careers")}
           </Link>
         </nav>
 
@@ -101,7 +103,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               : 'text-gray-600 hover:text-primary hover:bg-gray-50'
           }`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          aria-label={t("toggleMenu")}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -124,7 +126,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              About Us
+              {t("about")}
             </Link>
             
             <Link
@@ -136,7 +138,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Brands
+              {t("brands")}
             </Link>
 
             <Link
@@ -148,7 +150,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Press
+              {t("press")}
             </Link>
             
             <Link
@@ -160,7 +162,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Company
+              {t("company")}
             </Link>
 
             <Link
@@ -172,7 +174,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
               onClick={() => setIsOpen(false)}
             >
-              Careers
+              {t("careers")}
             </Link>
           </nav>
         </div>
