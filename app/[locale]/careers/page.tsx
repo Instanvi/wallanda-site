@@ -17,75 +17,83 @@ import {
   Send,
   Building
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function CareersPage() {
-  const [selectedDept, setSelectedDept] = useState("All");
+  const t = useTranslations("CareersPage");
+  const [selectedDept, setSelectedDept] = useState(t("filterAll"));
 
   const benefits = [
     {
-      title: "Global Mobility",
-      description: "Work remote-first from anywhere in the world, or collaborate from one of our corporate hubs in Douala, London, or New York.",
+      title: t("benefitGlobalMobility"),
+      description: t("benefitGlobalMobilityDesc"),
       icon: <Globe className="w-5 h-5 text-accent" />,
     },
     {
-      title: "Comprehensive Coverage",
-      description: "Premium health, dental, and travel insurance coverage powered directly by our integrated brand, Kovasure.",
+      title: t("benefitCoverage"),
+      description: t("benefitCoverageDesc"),
       icon: <Heart className="w-5 h-5 text-accent" />,
     },
     {
-      title: "Growth & Learning",
-      description: "An annual learning stipend for courses, conferences, or books to help you stay ahead in engineering and supply chain tech.",
+      title: t("benefitGrowth"),
+      description: t("benefitGrowthDesc"),
       icon: <Award className="w-5 h-5 text-accent" />,
     },
     {
-      title: "Modern Work Setup",
-      description: "A hardware budget to set up your home office with top-tier laptops, screens, and accessories to work efficiently.",
+      title: t("benefitSetup"),
+      description: t("benefitSetupDesc"),
       icon: <Zap className="w-5 h-5 text-accent" />,
     },
   ];
 
   const jobs = [
     {
-      title: "Senior Full-Stack Engineer (React / Next.js / Go)",
-      department: "Engineering",
-      location: "Douala, Cameroon (Hybrid) / Remote",
-      type: "Full-Time",
-      description: "Architect and develop core components for Ntigi Shipping Tech APIs and high-performance carrier integration backends.",
+      title: t("job1Title"),
+      department: t("filterEngineering"),
+      location: t("job1Location"),
+      type: t("fullTime"),
+      description: t("job1Description"),
     },
     {
-      title: "Lead Mobile Developer (React Native / iOS & Android)",
-      department: "Engineering",
-      location: "Remote (Global)",
-      type: "Full-Time",
-      description: "Own the mobile checkout experience and localized hub tracking maps inside the Kassongo consumer shipping application.",
+      title: t("job2Title"),
+      department: t("filterEngineering"),
+      location: t("job2Location"),
+      type: t("fullTime"),
+      description: t("job2Description"),
     },
     {
-      title: "Supply Chain Product Manager",
-      department: "Product",
-      location: "New York, NY / Hybrid",
-      type: "Full-Time",
-      description: "Define product requirements for our automated custom clearance systems and coordinate integrations with international freight carriers.",
+      title: t("job3Title"),
+      department: t("filterProduct"),
+      location: t("job3Location"),
+      type: t("fullTime"),
+      description: t("job3Description"),
     },
     {
-      title: "Logistics Integration Specialist",
-      department: "Operations",
-      location: "London, UK / Hybrid",
-      type: "Full-Time",
-      description: "Help enterprise clients integrate Ntigi APIs into their warehouse systems and orchestrate carrier dispatch channels.",
+      title: t("job4Title"),
+      department: t("filterOperations"),
+      location: t("job4Location"),
+      type: t("fullTime"),
+      description: t("job4Description"),
     },
     {
-      title: "Global Brand & Marketing Manager",
-      department: "Marketing",
-      location: "London, UK / Hybrid",
-      type: "Full-Time",
-      description: "Craft and execute the communication strategy for wollanda Global, coordinating PR campaigns across all three core brands.",
+      title: t("job5Title"),
+      department: t("filterMarketing"),
+      location: t("job5Location"),
+      type: t("fullTime"),
+      description: t("job5Description"),
     },
   ];
 
-  const departments = ["All", "Engineering", "Product", "Operations", "Marketing"];
+  const departments = [
+    t("filterAll"),
+    t("filterEngineering"),
+    t("filterProduct"),
+    t("filterOperations"),
+    t("filterMarketing")
+  ];
 
   const filteredJobs = jobs.filter(
-    (job) => selectedDept === "All" || job.department.toLowerCase() === selectedDept.toLowerCase()
+    (job) => selectedDept === t("filterAll") || job.department.toLowerCase() === selectedDept.toLowerCase()
   );
 
   return (
@@ -95,8 +103,8 @@ export default function CareersPage() {
       <main className="flex-1">
         {/* Page Hero with Background Image */}
         <PageHero
-          title="Build the future of borderless trade."
-          description="We are a team of software engineers, logistics experts, and Fintech builders working globally to streamline international commerce. Join us and shape how products move around the world."
+          title={t("pageTitle")}
+          description={t("pageDescription")}
           backgroundImage="/ship.jpeg"
         />
 
@@ -105,10 +113,10 @@ export default function CareersPage() {
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
-                Designed to support your best work
+                {t("benefitsTitle")}
               </h2>
               <p className="text-gray-500 text-sm">
-                We believe in taking care of our team so they can focus on solving complex global problems.
+                {t("benefitsDescription")}
               </p>
             </div>
 
@@ -134,7 +142,7 @@ export default function CareersPage() {
           <div className="max-w-4xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="font-display text-3xl font-extrabold text-primary tracking-tight mb-4">
-                Explore our current openings
+                {t("openingsTitle")}
               </h2>
               
               {/* Department Filters */}
@@ -159,7 +167,7 @@ export default function CareersPage() {
             <div className="space-y-4">
               {filteredJobs.length === 0 ? (
                 <div className="text-center py-12 bg-white rounded-2xl border border-gray-150 p-8">
-                  <p className="text-gray-500 text-sm">No open positions matching your filter. Keep an eye out or send an open application!</p>
+                  <p className="text-gray-500 text-sm">{t("noPositions")}</p>
                 </div>
               ) : (
                 filteredJobs.map((job, index) => (
@@ -196,7 +204,7 @@ export default function CareersPage() {
                         size="sm"
                         className="w-full md:w-auto"
                       >
-                        Apply Now
+                        {t("applyNow")}
                         <ChevronRight className="w-4 h-4" />
                       </Button>
                     </div>

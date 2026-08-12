@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { Users, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
 
 export default function CareersSection() {
+  const t = useTranslations("Careers");
   return (
     <section className="relative overflow-hidden bg-[#001D47] py-24 text-white">
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-accent/20 blur-3xl translate-x-1/2 -translate-y-1/2" />
@@ -17,17 +19,14 @@ export default function CareersSection() {
           <div>
 
             <h2 className="font-display text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-              Join the
+              {t("title")}
               <span className="block text-accent">
-                wollanda Global team
+                {t("titleHighlight")}
               </span>
             </h2>
 
             <p className="max-w-xl text-lg leading-8 text-white/75 mb-10">
-              We're shaping the future of global commerce through
-              technology, logistics, and innovation. Join a team that's
-              building solutions that empower businesses across Africa
-              and beyond.
+              {t("description")}
             </p>
 
             <Button
@@ -37,7 +36,7 @@ export default function CareersSection() {
               className="shadow-lg shadow-black/20"
             >
               <Briefcase className="h-5 w-5" />
-              Explore Opportunities
+              {t("exploreButton")}
             </Button>
           </div>
 
@@ -46,7 +45,7 @@ export default function CareersSection() {
             <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
               <Image
                 src="/team.jpeg"
-                alt="wollanda Global Team"
+                alt={t("teamAlt")}
                 width={700}
                 height={600}
                 className="h-[500px] w-full object-cover"
@@ -63,10 +62,10 @@ export default function CareersSection() {
 
                 <div>
                   <p className="font-display text-xl font-bold text-primary">
-                    Growing Team
+                    {t("growingTeam")}
                   </p>
                   <p className="text-sm text-gray-500">
-                    Build the future with us
+                    {t("buildFuture")}
                   </p>
                 </div>
               </div>

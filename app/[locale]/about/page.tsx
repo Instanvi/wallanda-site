@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import {
   ArrowUpRight,
@@ -38,27 +39,31 @@ interface BrandItem {
 }
 
 export default function AboutUsPage() {
+  const t = useTranslations("About");
+  const tBrands = useTranslations("Brands");
+  const tCommon = useTranslations("Common");
+  
   const brands: BrandItem[] = [
     {
-      name: "Ntigi",
-      tag: "Shipping Technology",
-      description: "Advanced desktop and web shipping technology solutions powering label generation, automated routing, and carrier API integrations.",
+      name: tBrands("ntigi.name"),
+      tag: tBrands("ntigi.tag"),
+      description: tBrands("ntigi.description"),
       link: "/brands/ntigi",
       icon: <Cpu className="h-7 w-7" />,
       accent: "border-t-4 border-accent",
     },
     {
-      name: "Kassongo",
-      tag: "Shipping App",
-      description: "The premier consumer and commercial shipping application connecting users to global delivery networks and localized hubs instantly.",
+      name: tBrands("kassongo.name"),
+      tag: tBrands("kassongo.tag"),
+      description: tBrands("kassongo.description"),
       link: "/brands/kassongo",
       icon: <Smartphone className="h-7 w-7" />,
       accent: "border-t-4 border-accent",
     },
     {
-      name: "Kovasure",
-      tag: "Cargo Insurance",
-      description: "Fully integrated cargo insurance providing real-time quotes, peace-of-mind transit protection, and automated claim handling.",
+      name: tBrands("kovasure.name"),
+      tag: tBrands("kovasure.tag"),
+      description: tBrands("kovasure.description"),
       link: "/brands/kovasure",
       icon: <Umbrella className="h-7 w-7" />,
       accent: "border-t-4 border-accent",
@@ -104,8 +109,8 @@ export default function AboutUsPage() {
       <main className="flex-1">
         {/* Page Hero with Background Image */}
         <PageHero
-          title="We move the world's commerce forward"
-          description="wollanda Global is the intelligent backbone of modern trade. Through our family of brands, we connect businesses, carriers, and consumers with seamless shipping, insurance, and financial technology."
+          title={t("pageTitle")}
+          description={t("pageDescription")}
           backgroundImage="/shipment.jpg"
         />
 
@@ -128,39 +133,27 @@ export default function AboutUsPage() {
               {/* Right - Content */}
               <div>
                 <span className="mb-4 block text-sm font-extrabold uppercase tracking-wider text-accent">
-                  Our Story
+                  {t("ourStoryBadge")}
                 </span>
 
                 <h2 className="mb-6 font-display text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                  Built for global trade, designed for local trust
+                  {t("ourStoryTitle")}
                 </h2>
 
                 <div className="space-y-5 leading-relaxed text-gray-600">
                   <p>
-                    wollanda Global was founded on a simple but powerful belief:
-                    that the complexity of international logistics should never
-                    be a barrier to growth. What began as a single shipping API
-                    has evolved into a comprehensive ecosystem serving
-                    enterprises, marketplaces, and independent merchants across
-                    six continents.
+                    {t("ourStoryP1")}
                   </p>
 
                   <p>
-                    Today, our family of brands
-                    <strong className="text-primary"> Ntigi</strong> for enterprise
-                    shipping technology,
-                    <strong className="text-primary"> Kassongo</strong> for consumer
-                    and commercial shipping applications, and
-                    <strong className="text-primary"> Kovasure</strong> for integrated
-                    cargo insurance work together to deliver end-to-end supply
-                    chain confidence.
+                    {t("ourStoryP2")}
+                    <strong className="text-primary"> {t("ourStoryP2Ntigi")}</strong> {t("ourStoryP2For")}
+                    <strong className="text-primary"> {t("ourStoryP2Kassongo")}</strong> {t("ourStoryP2ForConsumer")}
+                    <strong className="text-primary"> {t("ourStoryP2Kovasure")}</strong> {t("ourStoryP2ForInsurance")}
                   </p>
 
                   <p>
-                    We don't just move packages. We move possibilities. Every
-                    label printed, every policy issued, and every payment
-                    processed is another step toward a more connected and
-                    resilient global economy.
+                    {t("ourStoryP3")}
                   </p>
                 </div>
               </div>
@@ -174,13 +167,13 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="text-sm font-extrabold tracking-wider text-accent uppercase mb-4 block">
-                Leadership
+                {t("leadershipBadge")}
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-4">
-                Guided by vision, driven by execution
+                {t("leadershipTitle")}
               </h2>
               <p className="text-gray-600 text-lg">
-                Our leadership team brings decades of experience in logistics, fintech, and global enterprise technology.
+                {t("leadershipDescription")}
               </p>
             </div>
 
@@ -192,39 +185,34 @@ export default function AboutUsPage() {
                 <div className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                   <div className="mb-6">
                     <h3 className="font-display text-2xl sm:text-3xl font-bold text-primary mb-1">
-                      Genesis St. James Amahnui
+                      {t("ceoName")}
                     </h3>
 
                     <p className="text-accent font-semibold text-sm uppercase tracking-wider">
-                      Founder &amp; Chief Executive Officer
+                      {t("ceoTitle")}
                     </p>
                   </div>
 
                   <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
                     <p>
-                      Genesis St. James Amahnui is a Cameroonian technology entrepreneur and
-                      software systems designer. As the Founder and CEO of wollanda Global, he
-                      is dedicated to building innovative logistics and commerce technologies
-                      that empower businesses across Africa and global markets. His leadership
-                      focuses on creating scalable digital infrastructure that drives efficiency,
-                      connectivity, and sustainable business growth.
+                      {t("ceoDescription")}
                     </p>
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3 mb-6">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/5 text-primary rounded-lg text-xs font-semibold">
                       <MapPin className="h-3.5 w-3.5" />
-                      Douala, Cameroon
+                      {t("ceoLocation")}
                     </span>
 
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/5 text-primary rounded-lg text-xs font-semibold">
                       <Award className="h-3.5 w-3.5" />
-                      10+ Years Experience
+                      {t("ceoExperience")}
                     </span>
 
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/5 text-primary rounded-lg text-xs font-semibold">
                       <Globe className="h-3.5 w-3.5" />
-                      4 Continents Scaled
+                      {t("ceoContinents")}
                     </span>
                   </div>
 
@@ -269,35 +257,35 @@ export default function AboutUsPage() {
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="text-sm font-extrabold tracking-wider text-accent uppercase mb-4 block">
-                What We Stand For
+                {t("valuesBadge")}
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-4">
-                Our values define every shipment
+                {t("valuesTitle")}
               </h2>
               <p className="text-gray-600 text-lg">
-                From the warehouse floor to the boardroom, these principles guide how we build, partner, and serve.
+                {t("valuesDescription")}
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <ValueCard
-                title="Reliability First"
-                description="We treat every package as a promise. Our systems are engineered for 99.9% uptime, and our carrier network is rigorously vetted for consistency."
+                title={t("valueReliability")}
+                description={t("valueReliabilityDesc")}
                 icon={<Shield className="h-6 w-6" />}
               />
               <ValueCard
-                title="Borderless Innovation"
-                description="Global trade knows no borders, and neither do we. We build technology that works seamlessly across languages, currencies, and regulatory frameworks."
+                title={t("valueBorderless")}
+                description={t("valueBorderlessDesc")}
                 icon={<Globe className="h-6 w-6" />}
               />
               <ValueCard
-                title="Radical Transparency"
-                description="No hidden fees, no black-box algorithms. Our customers see exactly what they pay for and where their goods are &mdash; always."
+                title={t("valueTransparency")}
+                description={t("valueTransparencyDesc")}
                 icon={<Target className="h-6 w-6" />}
               />
               <ValueCard
-                title="Human-Centered Design"
-                description="Technology should reduce complexity, not add to it. Every interface, API, and workflow is designed with the end user in mind."
+                title={t("valueHuman")}
+                description={t("valueHumanDesc")}
                 icon={<Heart className="h-6 w-6" />}
               />
             </div>

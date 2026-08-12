@@ -21,8 +21,10 @@ import {
   Calendar,
   ArrowRight
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -120,10 +122,10 @@ export default function ContactPage() {
         <section className="bg-white border-b border-gray-200 py-16 md:py-24 px-6 md:px-8">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-display font-black tracking-tight text-primary mb-4 leading-tight">
-              Connect with our global offices.
+              {t("pageTitle")}
             </h1>
             <p className="text-base text-gray-500 max-w-2xl leading-relaxed">
-              Have questions about our shipping technology APIs, consumer logistics application, or cargo insurance policies? Send us a message and our support desks will reply shortly.
+              {t("pageDescription")}
             </p>
           </div>
         </section>
@@ -142,8 +144,8 @@ export default function ContactPage() {
                     <Globe2 className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-base mb-1">General Support</h3>
-                    <p className="text-xs text-gray-500 mb-3">For customer issues, shipping updates, or tracking help.</p>
+                    <h3 className="font-display font-bold text-primary text-base mb-1">{t("generalSupportTitle")}</h3>
+                    <p className="text-xs text-gray-500 mb-3">{t("generalSupportDesc")}</p>
                     <a
                       href="mailto:support@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
@@ -162,8 +164,8 @@ export default function ContactPage() {
                     <Cpu className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-base mb-1">Developer API Desk</h3>
-                    <p className="text-xs text-gray-500 mb-3">For Ntigi label integration and webhook implementation help.</p>
+                    <h3 className="font-display font-bold text-primary text-base mb-1">{t("devDeskTitle")}</h3>
+                    <p className="text-xs text-gray-500 mb-3">{t("devDeskDesc")}</p>
                     <a
                       href="mailto:devs@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
@@ -182,8 +184,8 @@ export default function ContactPage() {
                     <Building2 className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-base mb-1">Media &amp; Public Relations</h3>
-                    <p className="text-xs text-gray-500 mb-3">For PR assets, news desk inquiries, and corporate updates.</p>
+                    <h3 className="font-display font-bold text-primary text-base mb-1">{t("corporateDeskTitle")}</h3>
+                    <p className="text-xs text-gray-500 mb-3">{t("corporateDeskDesc")}</p>
                     <a
                       href="mailto:press@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
@@ -202,8 +204,8 @@ export default function ContactPage() {
                     <ShieldCheck className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-primary text-base mb-1">Kovasure Cargo Protection</h3>
-                    <p className="text-xs text-gray-500 mb-3">For policy status, claims resolution, and transit insurance quotes.</p>
+                    <h3 className="font-display font-bold text-primary text-base mb-1">{t("insuranceDeskTitle")}</h3>
+                    <p className="text-xs text-gray-500 mb-3">{t("insuranceDeskDesc")}</p>
                     <a
                       href="mailto:insurance@wollanda.com"
                       className="text-xs font-bold text-primary hover:text-accent transition-colors flex items-center gap-1 group/link"
@@ -226,24 +228,24 @@ export default function ContactPage() {
                     <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="font-display font-extrabold text-2xl text-primary mb-3">Message Sent!</h3>
+                    <h3 className="font-display font-extrabold text-2xl text-primary mb-3">{t("successTitle")}</h3>
                     <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                      Thank you for contacting wollanda Global. A logistics coordinator from our Douala engineering hub will review your query and reply shortly.
+                      {t("successDescription")}
                     </p>
                     <Button onClick={() => setStatus("idle")} variant="outline">
-                      Send another message
+                      {t("successButton")}
                     </Button>
                   </div>
                 ) : (
                   <>
-                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-primary mb-2">Send us a message</h2>
-                    <p className="text-sm text-gray-500 mb-8">Tell us about your logistics needs and we'll route your request to the right desk.</p>
+                    <h2 className="font-display text-2xl md:text-3xl font-extrabold text-primary mb-2">{t("formTitle")}</h2>
+                    <p className="text-sm text-gray-500 mb-8">{t("formDescription")}</p>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="name" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                            Full Name *
+                            {t("formNameLabel")} *
                           </label>
                           <Input
                             type="text"
@@ -252,12 +254,12 @@ export default function ContactPage() {
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="John Doe"
+                            placeholder={t("formNamePlaceholder")}
                           />
                         </div>
                         <div>
                           <label htmlFor="email" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                            Email Address *
+                            {t("formEmailLabel")} *
                           </label>
                           <Input
                             type="email"
@@ -266,7 +268,7 @@ export default function ContactPage() {
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="john@company.com"
+                            placeholder={t("formEmailPlaceholder")}
                           />
                         </div>
                       </div>
@@ -274,7 +276,7 @@ export default function ContactPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="phone" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                            Phone Number
+                            {t("formPhoneLabel")}
                           </label>
                           <Input
                             type="tel"
@@ -282,12 +284,12 @@ export default function ContactPage() {
                             id="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            placeholder="+1 (555) 000-0000"
+                            placeholder={t("formPhonePlaceholder")}
                           />
                         </div>
                         <div>
                           <label htmlFor="company" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                            Company Name
+                            {t("formCompanyLabel")}
                           </label>
                           <Input
                             type="text"
@@ -295,14 +297,14 @@ export default function ContactPage() {
                             id="company"
                             value={formData.company}
                             onChange={handleChange}
-                            placeholder="e.g. Acme Corp"
+                            placeholder={t("formCompanyPlaceholder")}
                           />
                         </div>
                       </div>
 
                       <div>
                         <label htmlFor="subject" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                          Inquiry Desk *
+                          {t("formSubjectLabel")} *
                         </label>
                         <Select
                           name="subject"
@@ -311,17 +313,17 @@ export default function ContactPage() {
                           value={formData.subject}
                           onChange={handleChange}
                         >
-                          <option value="general">General Inquiries Desk</option>
-                          <option value="ntigi">Ntigi Developer API Support</option>
-                          <option value="kassongo">Kassongo Shipping Support</option>
-                          <option value="kovasure">Kovasure Cargo Protection</option>
-                          <option value="press">Media &amp; Press Relations</option>
+                          <option value="general">{t("formSubjectGeneral")}</option>
+                          <option value="ntigi">{t("formSubjectNtigi")}</option>
+                          <option value="kassongo">{t("formSubjectKassongo")}</option>
+                          <option value="kovasure">{t("formSubjectKovasure")}</option>
+                          <option value="press">{t("formSubjectPress")}</option>
                         </Select>
                       </div>
 
                       <div>
                         <label htmlFor="message" className="block text-xs font-bold text-primary mb-2 uppercase tracking-wide">
-                          Your Message *
+                          {t("formMessageLabel")} *
                         </label>
                         <textarea
                           name="message"
@@ -331,7 +333,7 @@ export default function ContactPage() {
                           value={formData.message}
                           onChange={handleChange}
                           className="flex w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary focus:bg-white transition-all resize-none"
-                          placeholder="How can we help optimize your supply chain?"
+                          placeholder={t("formMessagePlaceholder")}
                         />
                       </div>
 
@@ -340,7 +342,7 @@ export default function ContactPage() {
                         disabled={status === "submitting"}
                         className="w-full sm:w-auto"
                       >
-                        {status === "submitting" ? "Sending Message..." : "Send Message"}
+                        {status === "submitting" ? t("formSubmitting") : t("formSubmit")}
                         <Send className="w-4 h-4 ml-1" />
                       </Button>
                     </form>

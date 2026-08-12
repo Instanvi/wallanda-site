@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { getBlogPosts, isContentfulConfigured } from "@/lib/contentful";
 import { relatedPressData } from "@/app/[locale]/press/pressData";
+import { getTranslations } from "next-intl/server";
 
 interface PressItem {
   title: string;
@@ -14,6 +15,7 @@ interface PressItem {
 }
 
 export default async function PressSection() {
+  const t = await getTranslations("Press");
   let articles: PressItem[] = [];
 
   if (isContentfulConfigured) {
@@ -26,7 +28,7 @@ export default async function PressSection() {
           title: fields.title || "",
           excerpt: fields.excerpt || "",
           date: fields.date ? fields.date.split("T")[0] : "",
-          source: fields.source || "wollanda Newsroom",
+          source: fields.source || t("defaultSource"),
           link: `/press/${fields.slug}`,
           thumbnail: fields.coverImage?.fields?.file?.url 
             ? `https:${fields.coverImage.fields.file.url}` 
@@ -56,20 +58,20 @@ export default async function PressSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
             <span className="mb-4 block text-sm font-extrabold uppercase tracking-wider text-accent">
-              Media Hub
+              {t("badge")}
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-3">
-              Recent Press & News
+              {t("title")}
             </h2>
             <p className="font-sans text-gray-600 text-base max-w-xl">
-              Stay up-to-date with our latest updates, industry integrations, and leadership announcements.
+              {t("description")}
             </p>
           </div>
           <Link
             href="/press"
             className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-accent transition-colors mt-6 md:mt-0 group"
           >
-            More News & Press
+            {t("moreNews")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -121,7 +123,7 @@ export default async function PressSection() {
                   href={article.link}
                   className="inline-flex items-center gap-1 text-sm font-bold text-primary group/link hover:text-accent transition-colors"
                 >
-                  Read Full Release
+                  {t("readFull")}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
                 </Link>
               </div>

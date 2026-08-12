@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "sonner";
 import "../globals.css";
+import "flag-icons/css/flag-icons.min.css";
 
 const inter = Inter({
   subsets: ["latin"],

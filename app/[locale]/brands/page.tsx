@@ -22,6 +22,7 @@ import {
     Quote,
 } from "lucide-react";
 import FeaturePill from "@/components/FeaturePill";
+import { useTranslations } from "next-intl";
 
 
 function Testimonial({ quote, name, title, company }: { quote: string; name: string; title: string; company: string }) {
@@ -52,6 +53,7 @@ interface BrandSectionProps {
     testimonial: { quote: string; name: string; title: string; company: string };
     ctaUrl: string;
     ctaLabel: string;
+    learnMoreLabel: string;
     icon: ReactNode;
     logo: string;
     accentColor: string;
@@ -60,7 +62,7 @@ interface BrandSectionProps {
     reverse?: boolean;
 }
 
-function BrandSection({ name, tagline, description, features, testimonial, ctaUrl, ctaLabel, icon, logo, accentColor, badges, reverse, bgcolor }: BrandSectionProps) {
+function BrandSection({ name, tagline, description, features, testimonial, ctaUrl, ctaLabel, learnMoreLabel, icon, logo, accentColor, badges, reverse, bgcolor }: BrandSectionProps) {
     return (
         <section id={name.toLowerCase()} className="py-16 md:py-20 lg:py-28 border-b border-gray-100 last:border-b-0 scroll-mt-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
@@ -111,7 +113,7 @@ function BrandSection({ name, tagline, description, features, testimonial, ctaUr
                                 href={`/brands/${name.toLowerCase()}`}
                                 className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
                             >
-                                Learn more about {name}
+                                {learnMoreLabel}
                                 <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
                             </Link>
                         </div>
@@ -183,105 +185,111 @@ function BrandSection({ name, tagline, description, features, testimonial, ctaUr
     );
 }
 export default function BrandsPage() {
+    const t = useTranslations("BrandsPage");
+    const tCommon = useTranslations("Common");
+    
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Header />
             <main className="flex-1">
                 {/* Page Hero with Background Image */}
                 <PageHero
-                    title="Deliver confidence with wollanda"
-                    description="Our family of specialized brands gives you the technology, coverage, and connectivity to scale across borders with complete confidence."
+                    title={t("pageTitle")}
+                    description={t("pageDescription")}
                     backgroundImage="/hero/image2.jpg"
                 />
 
                 <BrandSection
                     name="Ntigi"
-                    tagline="Ntigi Logistics"
-                    description="Ntigi is your key to unlocking scalable logistics success. Our powerful, user-friendly platform empowers online sellers and enterprises to manage, process, fulfill, and ship orders efficiently no matter the volume. With deep carrier API integrations, automated routing intelligence, and real-time label generation, Ntigi makes scaling your shipping operations effortless."
+                    tagline={t("ntigiTagline")}
+                    description={t("ntigiDescription")}
                     features={[
-                        { icon: <Cpu className="h-3.5 w-3.5" />, label: "API-First Architecture" },
-                        { icon: <Zap className="h-3.5 w-3.5" />, label: "Automated Routing" },
-                        { icon: <Truck className="h-3.5 w-3.5" />, label: "Multi-Carrier Labels" },
-                        { icon: <BarChart3 className="h-3.5 w-3.5" />, label: "Real-Time Analytics" },
+                        { icon: <Cpu className="h-3.5 w-3.5" />, label: t("ntigiFeatureAPI") },
+                        { icon: <Zap className="h-3.5 w-3.5" />, label: t("ntigiFeatureRouting") },
+                        { icon: <Truck className="h-3.5 w-3.5" />, label: t("ntigiFeatureLabels") },
+                        { icon: <BarChart3 className="h-3.5 w-3.5" />, label: t("ntigiFeatureAnalytics") },
                     ]}
                     testimonial={{
-                        quote: "We've gone from shipping a few hundred packages a day to tens of thousands. And thanks to Ntigi, we reduced our delivery costs by 18% while improving on-time performance to 99.4%.",
-                        name: "Marcus Chen",
-                        title: "VP of Operations",
-                        company: "Atlas Commerce",
+                        quote: t("ntigiTestimonialQuote"),
+                        name: t("ntigiTestimonialName"),
+                        title: t("ntigiTestimonialTitle"),
+                        company: t("ntigiTestimonialCompany"),
                     }}
                     ctaUrl="https://ntigi.cm"
-                    ctaLabel="Visit Ntigi"
+                    ctaLabel={t("ntigiCTA")}
+                    learnMoreLabel={t("ntigiLearnMore")}
                     icon={<Cpu className="h-7 w-7" />}
                     logo="/ntigi1.svg"
                     accentColor="bg-primary"
                     bgcolor="bg-[#263071]"
                     badges={[
-                        { icon: <Cpu className="h-4 w-4" />, label: "API-First" },
-                        { icon: <Truck className="h-4 w-4" />, label: "600+ Carriers" },
-                        { icon: <Zap className="h-4 w-4" />, label: "Automated" },
-                        { icon: <BarChart3 className="h-4 w-4" />, label: "Analytics" },
+                        { icon: <Cpu className="h-4 w-4" />, label: t("badgeAPIFirst") },
+                        { icon: <Truck className="h-4 w-4" />, label: t("badgeCarriers") },
+                        { icon: <Zap className="h-4 w-4" />, label: t("badgeAutomated") },
+                        { icon: <BarChart3 className="h-4 w-4" />, label: t("badgeAnalytics") },
                     ]}
                 />
 
                 <BrandSection
                     name="Kassongo"
-                    tagline="Kassongo Mail"
-                    description="Kassongo connects consumers and businesses to global delivery networks instantly through an intuitive mobile and web application. Whether you're a solopreneur sending your first international package or a growing SMB managing hundreds of shipments weekly, Kassongo puts enterprise-grade logistics in your pocket. Book, track, and manage every delivery from one beautifully simple interface."
+                    tagline={t("kassongoTagline")}
+                    description={t("kassongoDescription")}
                     features={[
-                        { icon: <Smartphone className="h-3.5 w-3.5" />, label: "Mobile-First Design" },
-                        { icon: <Globe className="h-3.5 w-3.5" />, label: "190+ Countries" },
-                        { icon: <CreditCard className="h-3.5 w-3.5" />, label: "Instant Quotes" },
-                        { icon: <Zap className="h-3.5 w-3.5" />, label: "One-Tap Booking" },
+                        { icon: <Smartphone className="h-3.5 w-3.5" />, label: t("kassongoFeatureMobile") },
+                        { icon: <Globe className="h-3.5 w-3.5" />, label: t("kassongoFeatureCountries") },
+                        { icon: <CreditCard className="h-3.5 w-3.5" />, label: t("kassongoFeatureQuotes") },
+                        { icon: <Zap className="h-3.5 w-3.5" />, label: t("kassongoFeatureBooking") },
                     ]}
                     testimonial={{
-                        quote: "As a small business owner, I never thought I could access the same shipping rates as the big players. Kassongo leveled the playing field my customers get faster delivery and I save over 20% on every shipment.",
-                        name: "Amara Okafor",
-                        title: "Founder",
-                        company: "Lagos Luxe Interiors",
+                        quote: t("kassongoTestimonialQuote"),
+                        name: t("kassongoTestimonialName"),
+                        title: t("kassongoTestimonialTitle"),
+                        company: t("kassongoTestimonialCompany"),
                     }}
                     ctaUrl="https://kassongomail.com"
-                    ctaLabel="Visit Kassongo"
+                    ctaLabel={t("kassongoCTA")}
+                    learnMoreLabel={t("kassongoLearnMore")}
                     icon={<Smartphone className="h-7 w-7" />}
                     logo="/kassongo.svg"
                     accentColor="bg-accent"
                     bgcolor="bg-green-800"
                     badges={[
-                        { icon: <Smartphone className="h-4 w-4" />, label: "Mobile-First" },
-                        { icon: <Globe className="h-4 w-4" />, label: "190+ Countries" },
-                        { icon: <Zap className="h-4 w-4" />, label: "Instant" },
-                        { icon: <CreditCard className="h-4 w-4" />, label: "Pay Easy" },
+                        { icon: <Smartphone className="h-4 w-4" />, label: t("badgeMobile") },
+                        { icon: <Globe className="h-4 w-4" />, label: t("badgeCountries") },
+                        { icon: <Zap className="h-4 w-4" />, label: t("badgeInstant") },
+                        { icon: <CreditCard className="h-4 w-4" />, label: t("badgePayEasy") },
                     ]}
                     reverse
                 />
 
                 <BrandSection
                     name="Kovasure"
-                    tagline="Kovasure Insurance"
-                    description="Kovasure delivers fully integrated cargo insurance that moves at the speed of commerce. Get real-time quotes in seconds, not days. Protect high-value, fragile, and time-sensitive shipments with policies designed for modern supply chains. Our automated claim handling and direct carrier partnerships mean that when the unexpected happens, resolution is fast, transparent, and fair."
+                    tagline={t("kovasureTagline")}
+                    description={t("kovasureDescription")}
                     features={[
-                        { icon: <Shield className="h-3.5 w-3.5" />, label: "Real-Time Quotes" },
-                        { icon: <Umbrella className="h-3.5 w-3.5" />, label: "All-Risk Coverage" },
-                        { icon: <Zap className="h-3.5 w-3.5" />, label: "Auto Claims" },
-                        { icon: <BarChart3 className="h-3.5 w-3.5" />, label: "Risk Analytics" },
+                        { icon: <Shield className="h-3.5 w-3.5" />, label: t("kovasureFeatureQuotes") },
+                        { icon: <Umbrella className="h-3.5 w-3.5" />, label: t("kovasureFeatureCoverage") },
+                        { icon: <Zap className="h-3.5 w-3.5" />, label: t("kovasureFeatureClaims") },
+                        { icon: <BarChart3 className="h-3.5 w-3.5" />, label: t("kovasureFeatureAnalytics") },
                     ]}
                     testimonial={{
-                        quote: "Before Kovasure, filing a cargo claim meant weeks of paperwork and uncertainty. Now claims are resolved in under 48 hours. That kind of speed and transparency has completely changed how we think about risk management.",
-                        name: "Elena Vasquez",
-                        title: "Supply Chain Director",
-                        company: "Pacifica Imports",
+                        quote: t("kovasureTestimonialQuote"),
+                        name: t("kovasureTestimonialName"),
+                        title: t("kovasureTestimonialTitle"),
+                        company: t("kovasureTestimonialCompany"),
                     }}
                     ctaUrl="https://kovasure.com"
-                    ctaLabel="Visit Kovasure"
+                    ctaLabel={t("kovasureCTA")}
+                    learnMoreLabel={t("kovasureLearnMore")}
                     icon={<Umbrella className="h-7 w-7" />}
                     logo="/kovasure.svg"
                     accentColor="bg-primary"
                     bgcolor="bg-[#0008ff]"
                     badges={[
-                        { icon: <Shield className="h-4 w-4" />, label: "Protected" },
-                        { icon: <Umbrella className="h-4 w-4" />, label: "All-Risk" },
-                        { icon: <Zap className="h-4 w-4" />, label: "Fast Claims" },
-                        { icon: <BarChart3 className="h-4 w-4" />, label: "Risk Insights" },
+                        { icon: <Shield className="h-4 w-4" />, label: t("badgeProtected") },
+                        { icon: <Umbrella className="h-4 w-4" />, label: t("badgeAllRisk") },
+                        { icon: <Zap className="h-4 w-4" />, label: t("badgeFastClaims") },
+                        { icon: <BarChart3 className="h-4 w-4" />, label: t("badgeRiskInsights") },
                     ]}
                 />
 
@@ -289,13 +297,13 @@ export default function BrandsPage() {
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
                             <span className="text-xs md:text-sm font-extrabold tracking-wider text-accent uppercase mb-3 md:mb-4 block">
-                                The Ecosystem
+                                {t("ecosystemBadge")}
                             </span>
                             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-primary mb-3 md:mb-4">
-                                One platform. Infinite possibilities.
+                                {t("ecosystemTitle")}
                             </h2>
                             <p className="text-gray-600 text-base md:text-lg">
-                                Ntigi, Kassongo, and Kovasure are designed to work together or stand alone. Mix and match the tools your business needs.
+                                {t("ecosystemDescription")}
                             </p>
                         </div>
 
@@ -315,19 +323,19 @@ export default function BrandsPage() {
                                 <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-600">
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Web, Mobile &amp; Desktop shipping platform</span>
+                                        <span>{t("ecosystemNtigiFeature1")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>600+ carrier API integrations</span>
+                                        <span>{t("ecosystemNtigiFeature2")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Automated batch label generation</span>
+                                        <span>{t("ecosystemNtigiFeature3")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Enterprise analytics dashboard</span>
+                                        <span>{t("ecosystemNtigiFeature4")}</span>
                                     </li>
                                 </ul>
                                 <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-gray-100">
@@ -337,7 +345,7 @@ export default function BrandsPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
                                     >
-                                        Visit ntigi.cm
+                                        {t("ecosystemNtigiLink")}
                                         <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
                                     </a>
                                 </div>
@@ -358,19 +366,19 @@ export default function BrandsPage() {
                                 <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-600">
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>iOS &amp; Android consumer app</span>
+                                        <span>{t("ecosystemKassongoFeature1")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Instant rate comparison</span>
+                                        <span>{t("ecosystemKassongoFeature2")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Localized hub pickup &amp; drop-off</span>
+                                        <span>{t("ecosystemKassongoFeature3")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Push notifications &amp; live tracking</span>
+                                        <span>{t("ecosystemKassongoFeature4")}</span>
                                     </li>
                                 </ul>
                                 <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-gray-100">
@@ -380,7 +388,7 @@ export default function BrandsPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
                                     >
-                                        Visit kassongomail.com
+                                        {t("ecosystemKassongoLink")}
                                         <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
                                     </a>
                                 </div>
@@ -401,19 +409,19 @@ export default function BrandsPage() {
                                 <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-600">
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Real-time policy quotes</span>
+                                        <span>{t("ecosystemKovasureFeature1")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>All-risk &amp; named-peril coverage</span>
+                                        <span>{t("ecosystemKovasureFeature2")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Automated claims processing</span>
+                                        <span>{t("ecosystemKovasureFeature3")}</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <ChevronRight className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent shrink-0 mt-0.5" />
-                                        <span>Integrated with Ntigi &amp; Kassongo</span>
+                                        <span>{t("ecosystemKovasureFeature4")}</span>
                                     </li>
                                 </ul>
                                 <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-gray-100">
@@ -423,7 +431,7 @@ export default function BrandsPage() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-xs md:text-sm font-bold text-accent hover:text-accent-hover transition-colors"
                                     >
-                                        Visit kovasure.com
+                                        {t("ecosystemKovasureLink")}
                                         <ArrowUpRight className="h-3.5 w-3.5 md:h-4 md:w-4" />
                                     </a>
                                 </div>

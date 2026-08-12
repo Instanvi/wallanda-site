@@ -15,35 +15,39 @@ import {
   Mail,
   FileText
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function CompanyPage() {
+  const t = useTranslations("CompanyPage");
+  const tOffices = useTranslations("Offices");
+  
   const stats = [
-    { label: "Founded", value: "2025" },
-    { label: "Global Offices", value: "3 Hubs" },
-    { label: "Carrier Network", value: "50+" },
-    { label: "Active Shippers", value: "120+" },
+    { label: t("statFounded"), value: "2025" },
+    { label: t("statOffices"), value: "3 Hubs" },
+    { label: t("statCarriers"), value: "50+" },
+    { label: t("statShippers"), value: "120+" },
   ];
 
   const offices = [
     {
       city: "Douala",
       country: "Cameroon",
-      role: "Global Headquarters & Engineering Hub",
-      address: "4 Étage, Bonaberi, Douala",
+      role: tOffices("doualaRole"),
+      address: tOffices("doualaAddress"),
       email: "douala@wollanda.com",
     },
     {
       city: "London",
       country: "United Kingdom",
-      role: "European Operations & FinTech Desk",
-      address: "30 St Mary Axe (The Gherkin), London",
+      role: tOffices("londonRole"),
+      address: tOffices("londonAddress"),
       email: "london@wollanda.com",
     },
     {
       city: "New York",
       country: "United States",
-      role: "North American Logistics & Carrier Partnerships",
-      address: "1 World Trade Center, New York, NY",
+      role: tOffices("nycRole"),
+      address: tOffices("nycAddress"),
       email: "nyc@wollanda.com",
     },
   ];
@@ -55,8 +59,8 @@ export default function CompanyPage() {
       <main className="flex-1">
         {/* Page Hero with Background Image */}
         <PageHero
-          title="One ecosystem. Endless connections."
-          description="wollanda Global is a leading multinational logistics technology corporation. We develop software infrastructure, consumer freight platforms, and financial products that make cross-border trade seamless, reliable, and secure."
+          title={t("pageTitle")}
+          description={t("pageDescription")}
           backgroundImage="/hero/image3.jpg"
         />
 
@@ -82,13 +86,13 @@ export default function CompanyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               <div className="lg:col-span-7 space-y-6">
                 <span className="text-xs font-extrabold tracking-wider text-accent uppercase block">
-                  About the Corporation
+                  {t("aboutBadge")}
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
-                  Powering global trade through digital innovation
+                  {t("aboutTitle")}
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-base">
-                  Founded to address the friction points of international shipping and logistics financing, wollanda Global represents a strategic evolution in the freight sector. By bringing together advanced API integrations, consumer apps, and cargo security protocols, we offer a complete tech stack for modern commerce.
+                  {t("aboutDescription")}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                   <div className="flex gap-3">
@@ -96,8 +100,8 @@ export default function CompanyPage() {
                       <Globe2 className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm text-primary mb-1">Global Presence</h4>
-                      <p className="text-xs text-gray-500 leading-relaxed">Operating hubs across Africa, Europe, and North America.</p>
+                      <h4 className="font-bold text-sm text-primary mb-1">{t("aboutGlobalPresence")}</h4>
+                      <p className="text-xs text-gray-500 leading-relaxed">{t("aboutGlobalPresenceDesc")}</p>
                     </div>
                   </div>
                   <div className="flex gap-3">
@@ -105,8 +109,8 @@ export default function CompanyPage() {
                       <ShieldCheck className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm text-primary mb-1">Compliance & Risk</h4>
-                      <p className="text-xs text-gray-500 leading-relaxed">Integrated real-time insurance protection and customs modules.</p>
+                      <h4 className="font-bold text-sm text-primary mb-1">{t("aboutCompliance")}</h4>
+                      <p className="text-xs text-gray-500 leading-relaxed">{t("aboutComplianceDesc")}</p>
                     </div>
                   </div>
                 </div>
@@ -114,8 +118,8 @@ export default function CompanyPage() {
 
               {/* Graphical Card side widget */}
               <div className="lg:col-span-5 bg-slate-50 p-8 rounded-3xl border border-gray-200/80 shadow-soft space-y-6">
-                <h3 className="font-display font-bold text-primary text-xl">Quick References</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">Access official corporate downloads, PR inquiries, and executive media assets.</p>
+                <h3 className="font-display font-bold text-primary text-xl">{t("quickRefsTitle")}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed">{t("quickRefsDesc")}</p>
                 
                 <div className="space-y-3">
                   <a
@@ -124,7 +128,7 @@ export default function CompanyPage() {
                   >
                     <div className="flex items-center gap-3">
                       <FileText className="w-5 h-5 text-primary" />
-                      <span className="text-xs font-bold text-gray-700">Official Newsroom</span>
+                      <span className="text-xs font-bold text-gray-700">{t("quickRefsNewsroom")}</span>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-accent transition-colors" />
                   </a>
@@ -134,7 +138,7 @@ export default function CompanyPage() {
                   >
                     <div className="flex items-center gap-3">
                       <Users2 className="w-5 h-5 text-primary" />
-                      <span className="text-xs font-bold text-gray-700">Leadership Team</span>
+                      <span className="text-xs font-bold text-gray-700">{t("quickRefsLeadership")}</span>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-accent transition-colors" />
                   </a>
@@ -151,13 +155,13 @@ export default function CompanyPage() {
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <span className="text-xs font-extrabold tracking-wider text-accent uppercase mb-3 block">
-                Global Operations
+                {t("officesBadge")}
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
-                Corporate Hubs & Offices
+                {t("officesTitle")}
               </h2>
               <p className="text-gray-600 text-sm">
-                Connecting global logistic corridors through strategic physical presences.
+                {t("officesDescription")}
               </p>
             </div>
 

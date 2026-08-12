@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
 
 export interface UnifiedPressPost {
   slug: string;
@@ -24,22 +25,34 @@ interface PressListingClientProps {
   posts: UnifiedPressPost[];
 }
 
-const categories = ["all", "corporate", "awards", "funding", "guides", "industry"];
-
 export default function PressListingClient({ posts }: PressListingClientProps) {
+  const t = useTranslations("Press");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
+  // Use stable keys for logic, translated labels for display
+  const categories = [
+    { key: "all", label: t("categoryAll") },
+    { key: "corporate", label: t("categoryCorporate") },
+    { key: "awards", label: t("categoryAwards") },
+    { key: "funding", label: t("categoryFunding") },
+    { key: "guides", label: t("categoryGuides") },
+    { key: "industry", label: t("categoryIndustry") },
+  ];
+
   const filteredPosts = posts.filter((post) => {
     const postCategory = post.category ? post.category.toLowerCase() : "";
-    const matchesCategory = selectedCategory === "all" || postCategory === selectedCategory.toLowerCase();
+    const matchesCategory =
+      selectedCategory === "all" || postCategory === selectedCategory;
 
     const titleText = post.title ? post.title.toLowerCase() : "";
     const excerptText = post.excerpt ? post.excerpt.toLowerCase() : "";
     const sourceText = post.source ? post.source.toLowerCase() : "";
-    
+
     const tagsArray = Array.isArray(post.tags) ? post.tags : [];
-    const tagMatch = tagsArray.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const tagMatch = tagsArray.some((tag) =>
+      tag.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     const matchesSearch =
       searchQuery === "" ||
@@ -62,8 +75,8 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
       <main className="flex-1">
         {/* Page Hero with Background Image */}
         <PageHero
-          title="News, updates, and trade insights"
-          description="Stay connected with the latest corporate mergers, strategic investments, product rollouts, and executive awards at wollanda Global."
+          title={t("pageTitle")}
+          description={t("pageDescription")}
           backgroundImage="/hero/image1.jpg"
         />
 
@@ -75,7 +88,7 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search articles, sources, tags..."
+                placeholder={t("searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-sm bg-gray-50 transition-all"
@@ -87,15 +100,14 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
               <Filter className="w-4 h-4 text-gray-400 flex-shrink-0 mr-1 hidden sm:block" />
               {categories.map((cat) => (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 border ${
-                    selectedCategory === cat
+                  key={cat.key}
+                  onClick={() => setSelectedCategory(cat.key)}
+                  className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-300 border ${selectedCategory === cat.key
                       ? "bg-primary text-white border-primary"
                       : "bg-white text-gray-600 border-gray-200 hover:border-accent hover:text-accent"
-                  }`}
+                    }`}
                 >
-                  {cat}
+                  {cat.label}
                 </button>
               ))}
             </div>
@@ -109,8 +121,10 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 flex items-center justify-center">
                 <Search className="w-6 h-6 text-gray-400" />
               </div>
-              <h3 className="text-xl font-display font-bold text-primary mb-2">No Articles Found</h3>
-              <p className="text-gray-500 mb-6 max-w-md mx-auto">We couldn't find any press releases matching "{searchQuery}" under "{selectedCategory}" category.</p>
+              <h3 className="text-xl font-display font-bold text-primary mb-2">{t("noArticlesTitle")}</h3>
+              <p className="text-gray-500 mb-6 max-w-md mx-auto">
+                {t("noArticlesDesc", { query: searchQuery, category: selectedCategory })}
+              </p>
               <Button
                 variant="outline"
                 onClick={() => {
@@ -118,7 +132,7 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                   setSelectedCategory("all");
                 }}
               >
-                Clear Search filters
+                {t("clearFilters")}
               </Button>
             </div>
           ) : (
@@ -138,10 +152,10 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent"></div>
                       <div className="absolute top-6 left-6 px-3 py-1 bg-accent text-white text-xs font-black tracking-wider uppercase rounded-full">
-                        FEATURED
+                        {t("featured")}
                       </div>
                     </a>
-                    
+
                     <div className="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center gap-3 text-xs text-gray-500 mb-6">
@@ -152,13 +166,13 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                           <span className="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
                           <span className="font-semibold text-primary">{featuredPost.source}</span>
                         </div>
-                        
+
                         <a href={`/press/${featuredPost.slug}`} className="block group/title">
                           <h2 className="font-display text-2xl lg:text-3xl font-extrabold text-primary mb-4 leading-tight group-hover/title:text-accent transition-colors">
                             {featuredPost.title}
                           </h2>
                         </a>
-                        
+
                         <p className="text-gray-600 text-sm leading-relaxed mb-6">
                           {featuredPost.excerpt}
                         </p>
@@ -173,7 +187,7 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                           href={`/press/${featuredPost.slug}`}
                           className="inline-flex items-center gap-1 text-sm font-bold text-primary group/link hover:text-accent transition-colors"
                         >
-                          Read Full Release
+                          {t("readFull")}
                           <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                         </a>
                       </div>
@@ -233,7 +247,7 @@ export default function PressListingClient({ posts }: PressListingClientProps) {
                         href={`/press/${post.slug}`}
                         className="font-bold text-primary hover:text-accent inline-flex items-center gap-0.5 group/link"
                       >
-                        Read More
+                        {t("readMore")}
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5" />
                       </a>
                     </div>

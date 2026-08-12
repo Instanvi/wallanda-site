@@ -1,6 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function PartnersSection() {
+  const t = useTranslations("Partners");
   // Only major logistics and shipping carriers
   const carriers = [
     { src: "/DHL-Logo.wine.svg", alt: "DHL", h: "100px" },
@@ -19,10 +22,10 @@ export default function PartnersSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-primary mb-4">
-            Global carrier network
+            {t("title")}
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Integrated with the world's leading logistics carriers to deliver your packages reliably and efficiently
+            {t("description")}
           </p>
         </div>
 
@@ -52,7 +55,7 @@ export default function PartnersSection() {
                 1,000+
               </div>
               <div className="text-gray-600 text-sm md:text-base">
-                Carrier Partnerships
+                {t("stats.partnerships")}
               </div>
             </div>
             <div>
@@ -60,7 +63,7 @@ export default function PartnersSection() {
                 50+
               </div>
               <div className="text-gray-600 text-sm md:text-base">
-                Platform Integrations
+                {t("stats.integrations")}
               </div>
             </div>
             <div>
@@ -68,7 +71,7 @@ export default function PartnersSection() {
                 30+
               </div>
               <div className="text-gray-600 text-sm md:text-base">
-                Countries Served
+                {t("stats.countries")}
               </div>
             </div>
           </div>

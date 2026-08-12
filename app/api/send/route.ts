@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
 
     const { data: emailData, error } = await resend.emails.send({
       from: "wollanda Global <noreply@instanvi.com>",
-      to: ["juniorthuram2@gmail.com"], 
+      to: ["hi@instanvi.com"], 
       subject: subject,
       react: emailComponent,
     });
